@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.bitqiu.cc</id>
     <title>Bitqiu</title>
-    <updated>2020-03-15T03:19:46.164Z</updated>
+    <updated>2020-03-15T08:44:18.289Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.bitqiu.cc"/>
     <link rel="self" href="https://blog.bitqiu.cc/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://blog.bitqiu.cc/images/avatar.png</logo>
     <icon>https://blog.bitqiu.cc/favicon.ico</icon>
     <rights>All rights reserved 2020, Bitqiu</rights>
+    <entry>
+        <title type="html"><![CDATA[使用 kubeadm 安装 kubernetes_v1.17.x]]></title>
+        <id>https://blog.bitqiu.cc/post/shi-yong-kubeadm-an-zhuang-kubernetes_v117x/</id>
+        <link href="https://blog.bitqiu.cc/post/shi-yong-kubeadm-an-zhuang-kubernetes_v117x/">
+        </link>
+        <updated>2020-03-15T03:19:50.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="配置要求">配置要求</h1>
+<ul>
+<li>至少2台 2核4G 的服务器</li>
+<li>Cent OS 7.6</li>
+</ul>
+<h2 id="安装后的软件版本为">安装后的软件版本为</h2>
+<ul>
+<li>Kubernetes v1.17.x
+<ul>
+<li>calico 3.10.2</li>
+<li>nginx-ingress 1.5.5</li>
+</ul>
+</li>
+<li>Docker 18.09.7</li>
+</ul>
+<h1 id="修改-hostname">修改 hostname</h1>
+<pre><code class="language-shell"># 修改 hostname
+hostnamectl set-hostname your-new-host-name
+# 查看修改结果
+hostnamectl status
+# 设置 hostname 解析
+echo &quot;127.0.0.1   $(hostname)&quot; &gt;&gt; /etc/hosts
+
+# 此处 hostname 的输出将会是该机器在 Kubernetes 集群中的节点名字
+# 不能使用 localhost 作为节点的名字
+cat /etc/redhat-release
+hostname
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://blog.bitqiu.cc/post/hello-gridea/</id>
