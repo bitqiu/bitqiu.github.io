@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>使用 kubeadm 安装 kubernetes | Bitqiu</title>
-<link rel="shortcut icon" href="https://blog.bitqiu.cc/favicon.ico?v=1584958784786">
+<link rel="shortcut icon" href="https://blog.bitqiu.cc/favicon.ico?v=1584959135117">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://blog.bitqiu.cc/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="使用 kubeadm 安装 kubernetes | Bitqiu - Atom Feed" href="https://blog.bitqiu.cc/atom.xml">
@@ -11,22 +11,18 @@
 
 
 
-    <meta name="description" content="配置要求
+    <meta name="description" content="
+教程来源 https://kuboard.cn/install/install-k8s.html
+修改了部分内容
+
+配置要求
 
 至少2台 2核4G 的服务器
 Cent OS 7.6
 
 安装后的软件版本为
 
-Kubernetes v1.17.x
-
-calico 3.13.1
-nginx-ingress 1.5.5
-
-
-Docker 19.03.8
-
-修改 ..." />
+Kubernetes v1.17..." />
     <meta name="keywords" content="K8S,Kubernetes" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -36,7 +32,7 @@ Docker 19.03.8
       <div class="main-content">
         <div class="site-header">
   <a href="https://blog.bitqiu.cc">
-  <img class="avatar" src="https://blog.bitqiu.cc/images/avatar.png?v=1584958784786" alt="">
+  <img class="avatar" src="https://blog.bitqiu.cc/images/avatar.png?v=1584959135117" alt="">
   </a>
   <h1 class="site-title">
     Bitqiu
@@ -96,7 +92,7 @@ Docker 19.03.8
                 2020-03-15
               </span>
               <span>
-                10 min read
+                11 min read
               </span>
               
                 <a href="https://blog.bitqiu.cc/tag/k8s/" class="post-tag">
@@ -111,7 +107,11 @@ Docker 19.03.8
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="配置要求">配置要求</h2>
+                <blockquote>
+<p>教程来源 https://kuboard.cn/install/install-k8s.html<br>
+修改了部分内容</p>
+</blockquote>
+<h2 id="配置要求">配置要求</h2>
 <ul>
 <li>至少2台 2核4G 的服务器</li>
 <li>Cent OS 7.6</li>
