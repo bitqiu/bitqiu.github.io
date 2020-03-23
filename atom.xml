@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.bitqiu.cc</id>
     <title>Bitqiu</title>
-    <updated>2020-03-23T02:52:06.653Z</updated>
+    <updated>2020-03-23T02:55:10.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.bitqiu.cc"/>
     <link rel="self" href="https://blog.bitqiu.cc/atom.xml"/>
@@ -21,17 +21,17 @@
 <pre><code class="language-shell">curl -i -X POST \
   --url http://localhost:8001/services/ \
   --data 'name=api-gateway-sv' \
-  --data 'url=http://www.baidu.com'
+  --data 'url=https://blog.bitqiu.cc'
 </code></pre>
 <p>为服务添加路由</p>
 <pre><code class="language-shell">curl -i -X POST \
   --url http://localhost:8001/services/api-gateway-sv/routes \
-  --data 'hosts[]=api.downtown8.com'
+  --data 'hosts[]=api.bitqiu.cc'
 </code></pre>
 <p>通过Kong转发您的请求</p>
 <pre><code class="language-shell">curl -i -X GET \
   --url http://localhost:8000/ \
-  --header 'Host: api.downtown8.com'
+  --header 'Host: api.bitqiu.cc'
 </code></pre>
 <h2 id="配置-jwt">配置 JWT</h2>
 <p>service 开启 jwt 插件</p>
@@ -46,21 +46,21 @@ curl -i -X POST \
 <p>创建 consumer</p>
 <pre><code class="language-shell">curl -i -X POST \
 	--url http://localhost:8000/consumers \
-	--data 'username=downtown'
+	--data 'username=bitqiu'
 </code></pre>
 <p>创建 jwt 凭证</p>
 <blockquote>
 <p>可以指定算法<code>algorithm</code>，<code>iss</code>签发者<code>key</code>，密钥<code>secret</code>，也可以省略，会自动生成。</p>
 </blockquote>
 <pre><code class="language-shell">curl -i -X POST \
-	--url http://localhost:8000/consumers/downtown/jwt \
+	--url http://localhost:8000/consumers/bitqiu/jwt \
 	--data 'algorithm=HS256' \
-	--data 'key=downtown_key' \
+	--data 'key=bitqiu_key' \
 	--data 'secret=uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u'
 
 # 查看 jwt 凭证
 curl -i -X GET \
-	--url http://localhost:8000/consumers/downtown/jwt
+	--url http://localhost:8000/consumers/bitqiu/jwt
 # response
 {
     &quot;rsa_public_key&quot;: null,
@@ -79,7 +79,7 @@ curl -i -X GET \
 <code>Authorization: Bearer jwt</code> 进行请求。测试的话可以用 <a href="https://jwt.io/">https://jwt.io</a> 生成：</p>
 <pre><code class="language-shell">curl -i -X GET \
   --url http://localhost:8000/ \
-  --header 'Host: api.downtown8.com'
+  --header 'Host: api.bitqiu.cc'
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkb3dudG93bl9rZXkiLCJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.nDvZa6Nu9cLxO36jnXsHwYIxrNLrDomJgvKJ5gihn4k'
 </code></pre>
 <figure data-type="image" tabindex="1"><img src="https://blog.bitqiu.cc/post-images/1584931432669.png" alt="" loading="lazy"></figure>
