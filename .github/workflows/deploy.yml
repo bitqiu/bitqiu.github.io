@@ -31,26 +31,17 @@ jobs:
         yarn run hexo clean
         yarn run hexo generate
 
-
-    - name: Hexo Deploy
-      uses: sma11black/hexo-action@v1.0.4
-      with:
-        deploy_key: ${{ secrets.SSH_PRIVATE }}
-        user_name: bitqiu  # (or delete this input setting to use bot account)
-        user_email: i@bitqiu.cc  # (or delete this input setting to use bot account)
-        commit_msg: ${{ github.event.head_commit.message }}
-
-    # - name: Hexo Deploy           # 部署步骤，这里以 hexo deploy 为例
-    #   env:
-    #     SSH_PRIVATE: ${{ secrets.SSH_PRIVATE }}
-    #     GIT_NAME: bitqiu
-    #     GIT_EMAIL: i@bitqiu.cc
-    #   run: |
-    #     mkdir -p ~/.ssh/
-    #     echo "$SSH_PRIVATE"
-    #     echo "$SSH_PRIVATE" | tr -d '\r' > ~/.ssh/id_rsa
-    #     chmod 600 ~/.ssh/id_rsa
-    #     ssh-keyscan github.com >> ~/.ssh/known_hosts
-    #     git config --global user.name "$GIT_NAME"
-    #     git config --global user.email "$GIT_EMAIL"
-    #     yarn run hexo deploy
+    - name: Hexo Deploy           # 部署步骤，这里以 hexo deploy 为例
+      env:
+        SSH_PRIVATE: ${{ secrets.SSH_PRIVATE }}
+        GIT_NAME: bitqiu
+        GIT_EMAIL: i@bitqiu.cc
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_PRIVATE"
+        echo "$SSH_PRIVATE" | tr -d '\r' > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        git config --global user.name "$GIT_NAME"
+        git config --global user.email "$GIT_EMAIL"
+        yarn run hexo deploy
