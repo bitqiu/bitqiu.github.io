@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="Bitqiu">
+  <meta name="keywords" content="">
+  
+  <title>使用 kubeadm 安装 kubernetes - Bitqiu Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.bitqiu.cc","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Bitqiu Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="使用 kubeadm 安装 kubernetes">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-11 10:58" pubdate>
+        2020年3月11日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      30
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">使用 kubeadm 安装 kubernetes</h1>
+            
+            <div class="markdown-body">
+              <h2 id="配置要求"><a href="#配置要求" class="headerlink" title="配置要求"></a>配置要求</h2><ul>
+<li>至少2台 2核4G 的服务器</li>
+<li>Cent OS 7.6</li>
+</ul>
+<h3 id="安装后的软件版本为"><a href="#安装后的软件版本为" class="headerlink" title="安装后的软件版本为"></a>安装后的软件版本为</h3><ul>
+<li>Kubernetes v1.17.x<ul>
+<li>calico 3.13.1</li>
+<li>nginx-ingress 1.5.5</li>
+</ul>
+</li>
+<li>Docker 19.03.8</li>
+</ul>
+<h2 id="修改-hostname"><a href="#修改-hostname" class="headerlink" title="修改 hostname"></a>修改 hostname</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 修改 hostname</span><br>hostnamectl set-hostname your-new-host-name<br><span class="hljs-meta">#</span><span class="bash"> 查看修改结果</span><br>hostnamectl status<br><span class="hljs-meta">#</span><span class="bash"> 设置 hostname 解析</span><br>echo &quot;127.0.0.1   $(hostname)&quot; &gt;&gt; /etc/hosts<br><br><span class="hljs-meta">#</span><span class="bash"> 此处 hostname 的输出将会是该机器在 Kubernetes 集群中的节点名字</span><br><span class="hljs-meta">#</span><span class="bash"> 不能使用 localhost 作为节点的名字</span><br>cat /etc/redhat-release<br>hostname<br></code></pre></td></tr></table></figure>
+
+<h2 id="检查网络"><a href="#检查网络" class="headerlink" title="检查网络"></a>检查网络</h2><p>在所有节点执行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs shell">[root@k8s-master ~]# ip route show<br>default via 10.1.2.2 dev ens33 proto static metric 100<br>10.1.2.0/24 dev ens33 proto kernel scope link src 10.1.2.100 metric 100<br><br>[root@k8s-master ~]# ip address<br>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000<br>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00<br>    inet 127.0.0.1/8 scope host lo<br>       valid_lft forever preferred_lft forever<br>    inet6 ::1/128 scope host<br>       valid_lft forever preferred_lft forever<br>2: ens33: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000<br>    link/ether 00:0c:29:2e:35:42 brd ff:ff:ff:ff:ff:ff<br>    inet 10.1.2.100/24 brd 10.1.2.255 scope global noprefixroute ens33<br>       valid_lft forever preferred_lft forever<br>    inet6 fe80::a3e8:7936:50da:d341/64 scope link noprefixroute<br>       valid_lft forever preferred_lft forever<br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>kubelet使用的IP地址</p>
+<ul>
+<li><code>ip route show</code> 命令中，可以知道机器的默认网卡，通常是 <code>eth0</code>，如 <em><strong>default via 10.1.2.2 dev eth0</strong></em></li>
+<li><code>ip address</code> 命令中，可显示默认网卡的 IP 地址，Kubernetes 将使用此 IP 地址与集群内的其他节点通信，如 <code>10.1.2.100</code></li>
+<li>所有节点上 Kubernetes 所使用的 IP 地址必须可以互通（无需 NAT 映射、无安全组或防火墙隔离）</li>
+</ul>
+</blockquote>
+<h2 id="安装docker及kubelet"><a href="#安装docker及kubelet" class="headerlink" title="安装docker及kubelet"></a>安装docker及kubelet</h2><p>使用 root 身份在所有节点执行如下代码，以安装软件：</p>
+<ul>
+<li>docker</li>
+<li>nfs-utils</li>
+<li>kubectl / kubeadm / kubelet</li>
+</ul>
+<p>手动执行以下代码，结果与快速安装相同。<em><strong>请将脚本第79行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.17.4</strong></em></p>
+<blockquote>
+<p>docker hub 镜像请根据自己网络的情况任选一个</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 在 master 节点和 worker 节点都要执行</span><br><span class="hljs-meta">#</span><span class="bash"> 最后一个参数 1.17.4 用于指定 kubenetes 版本，支持所有 1.17.x 版本的安装</span><br><span class="hljs-meta">#</span><span class="bash"> 腾讯云 docker hub 镜像</span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-built_in">export</span> REGISTRY_MIRROR=<span class="hljs-string">&quot;https://mirror.ccs.tencentyun.com&quot;</span></span><br><span class="hljs-meta">#</span><span class="bash"> DaoCloud 镜像</span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-built_in">export</span> REGISTRY_MIRROR=<span class="hljs-string">&quot;http://f1361db2.m.daocloud.io&quot;</span></span><br><span class="hljs-meta">#</span><span class="bash"> 阿里云 docker hub 镜像</span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-built_in">export</span> REGISTRY_MIRROR=https://registry.cn-hangzhou.aliyuncs.com</span><br><span class="hljs-meta">#</span><span class="bash"> 微软Azure docker hub 镜像</span><br>export REGISTRY_MIRROR=https://dockerhub.azk8s.cn<br></code></pre></td></tr></table></figure>
+
+<p><strong>在 master 节点和 worker 节点都要执行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 卸载旧版本</span><br>yum remove -y docker \<br>docker-client \<br>docker-client-latest \<br>docker-common \<br>docker-latest \<br>docker-latest-logrotate \<br>docker-logrotate \<br>docker-selinux \<br>docker-engine-selinux \<br>docker-engine<br><br><span class="hljs-meta">#</span><span class="bash"> 设置 yum repository</span><br>yum install -y yum-utils \<br>device-mapper-persistent-data \<br>lvm2 \<br>wget<br>yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br><br><span class="hljs-meta">#</span><span class="bash"> 安装并启动 docker</span><br>yum install -y docker-ce-19.03.8 docker-ce-cli-19.03.8 containerd.io<br>systemctl enable docker<br>systemctl start docker<br><br><span class="hljs-meta">#</span><span class="bash"> 安装 nfs-utils</span><br><span class="hljs-meta">#</span><span class="bash"> 必须先安装 nfs-utils 才能挂载 nfs 网络存储</span><br>yum install -y nfs-utils<br><br><span class="hljs-meta">#</span><span class="bash"> 关闭 防火墙</span><br>systemctl stop firewalld<br>systemctl disable firewalld<br><br><span class="hljs-meta">#</span><span class="bash"> 关闭 SeLinux</span><br>setenforce 0<br>sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config<br><br><span class="hljs-meta">#</span><span class="bash"> 关闭 swap</span><br>swapoff -a<br>yes | cp /etc/fstab /etc/fstab_bak<br>cat /etc/fstab_bak |grep -v swap &gt; /etc/fstab<br><br><span class="hljs-meta">#</span><span class="bash"> 修改 /etc/sysctl.conf</span><br><span class="hljs-meta">#</span><span class="bash"> 如果有配置，则修改</span><br>sed -i &quot;s#^net.ipv4.ip_forward.*#net.ipv4.ip_forward=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.bridge.bridge-nf-call-ip6tables.*#net.bridge.bridge-nf-call-ip6tables=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.bridge.bridge-nf-call-iptables.*#net.bridge.bridge-nf-call-iptables=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.ipv6.conf.all.disable_ipv6.*#net.ipv6.conf.all.disable_ipv6=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.ipv6.conf.default.disable_ipv6.*#net.ipv6.conf.default.disable_ipv6=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.ipv6.conf.lo.disable_ipv6.*#net.ipv6.conf.lo.disable_ipv6=1#g&quot;  /etc/sysctl.conf<br>sed -i &quot;s#^net.ipv6.conf.all.forwarding.*#net.ipv6.conf.all.forwarding=1#g&quot;  /etc/sysctl.conf<br><br><span class="hljs-meta">#</span><span class="bash"> 可能没有，追加</span><br>echo &quot;net.ipv4.ip_forward = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.bridge.bridge-nf-call-ip6tables = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.bridge.bridge-nf-call-iptables = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.ipv6.conf.all.disable_ipv6 = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.ipv6.conf.default.disable_ipv6 = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.ipv6.conf.lo.disable_ipv6 = 1&quot; &gt;&gt; /etc/sysctl.conf<br>echo &quot;net.ipv6.conf.all.forwarding = 1&quot;  &gt;&gt; /etc/sysctl.conf<br><br><span class="hljs-meta">#</span><span class="bash"> 执行命令以应用</span><br>sysctl -p<br><br><span class="hljs-meta">#</span><span class="bash"> 配置K8S的yum源</span><br>cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo<br>[kubernetes]<br>name=Kubernetes<br>baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64<br>enabled=1<br>gpgcheck=0<br>repo_gpgcheck=0<br>gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg<br>       http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg<br>EOF<br><br><span class="hljs-meta">#</span><span class="bash"> 卸载旧版本</span><br>yum remove -y kubelet kubeadm kubectl<br><br><span class="hljs-meta">#</span><span class="bash"> 安装kubelet、kubeadm、kubectl</span><br><span class="hljs-meta">#</span><span class="bash"> 将 <span class="hljs-variable">$&#123;1&#125;</span> 替换为 kubernetes 版本号，例如 1.17.4</span><br>yum install -y kubelet-$&#123;1&#125; kubeadm-$&#123;1&#125; kubectl-$&#123;1&#125;<br><br><span class="hljs-meta">#</span><span class="bash"> 修改docker Cgroup Driver为systemd</span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-comment"># 将/usr/lib/systemd/system/docker.service文件中的这一行 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</span></span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-comment"># 修改为 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --exec-opt native.cgroupdriver=systemd</span></span><br><span class="hljs-meta">#</span><span class="bash"> 如果不修改，在添加 worker 节点时可能会碰到如下错误</span><br><span class="hljs-meta">#</span><span class="bash"> [WARNING IsDockerSystemdCheck]: detected <span class="hljs-string">&quot;cgroupfs&quot;</span> as the Docker cgroup driver. The recommended driver is <span class="hljs-string">&quot;systemd&quot;</span>.</span> <br><span class="hljs-meta">#</span><span class="bash"> Please follow the guide at https://kubernetes.io/docs/setup/cri/</span><br>sed -i &quot;s#^ExecStart=/usr/bin/dockerd.*#ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --exec-opt native.cgroupdriver=systemd#g&quot; /usr/lib/systemd/system/docker.service<br><br><span class="hljs-meta">#</span><span class="bash"> 设置 docker 镜像，提高 docker 镜像下载速度和稳定性</span><br><span class="hljs-meta">#</span><span class="bash"> 如果您访问 https://hub.docker.io 速度非常稳定，亦可以跳过这个步骤</span><br>mkdir -p /etc/docker<br>tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;<br>&#123;<br>  &quot;registry-mirrors&quot;: [&quot;https://dockerhub.azk8s.cn&quot;]<br>&#125;<br>EOF<br>systemctl daemon-reload<br>systemctl restart docker<br>systemctl enable kubelet &amp;&amp; systemctl start kubelet<br></code></pre></td></tr></table></figure>
+
+<h2 id="初始化-master-节点"><a href="#初始化-master-节点" class="headerlink" title="初始化 master 节点"></a>初始化 master 节点</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 只在 master 节点执行</span><br><span class="hljs-meta">#</span><span class="bash"> 替换 x.x.x.x 为 master 节点的内网IP</span><br><span class="hljs-meta">#</span><span class="bash"> <span class="hljs-built_in">export</span> 命令只在当前 shell 会话中有效，开启新的 shell 窗口后，如果要继续安装过程，请重新执行此处的 <span class="hljs-built_in">export</span> 命令</span><br>export MASTER_IP=x.x.x.x<br><span class="hljs-meta">#</span><span class="bash"> 替换 apiserver.demo 为 您想要的 dnsName</span><br>export APISERVER_NAME=apiserver.demo<br><span class="hljs-meta">#</span><span class="bash"> Kubernetes 容器组所在的网段，该网段安装完成后，由 kubernetes 创建，事先并不存在于您的物理网络中</span><br>export POD_SUBNET=10.100.0.1/16<br>echo &quot;$&#123;MASTER_IP&#125;    $&#123;APISERVER_NAME&#125;&quot; &gt;&gt; /etc/hosts<br></code></pre></td></tr></table></figure>
+
+<p><strong>只在 master 节点执行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 查看完整配置选项 https://godoc.org/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta2</span><br>rm -f ./kubeadm-config.yaml<br>cat &lt;&lt;EOF &gt; ./kubeadm-config.yaml<br>apiVersion: kubeadm.k8s.io/v1beta2<br>kind: ClusterConfiguration<br>kubernetesVersion: v$&#123;1&#125;<br>imageRepository: gcr.azk8s.cn/google_containers<br>controlPlaneEndpoint: &quot;$&#123;APISERVER_NAME&#125;:6443&quot;<br>networking:<br>  serviceSubnet: &quot;10.96.0.0/16&quot;<br>  podSubnet: &quot;$&#123;POD_SUBNET&#125;&quot;<br>  dnsDomain: &quot;cluster.local&quot;<br>EOF<br><br><span class="hljs-meta">#</span><span class="bash"> kubeadm init</span><br><span class="hljs-meta">#</span><span class="bash"> 根据您服务器网速的情况，您需要等候 3 - 10 分钟</span><br>kubeadm init --config=kubeadm-config.yaml --upload-certs<br><br><span class="hljs-meta">#</span><span class="bash"> 配置 kubectl</span><br>rm -rf /root/.kube/<br>mkdir /root/.kube/<br>cp -i /etc/kubernetes/admin.conf /root/.kube/config<br><br><span class="hljs-meta">#</span><span class="bash"> 安装 calico 网络插件</span><br><span class="hljs-meta">#</span><span class="bash"> 参考文档 https://docs.projectcalico.org/v3.13/getting-started/kubernetes/self-managed-onprem/onpremises</span><br>echo &quot;安装calico-3.13&quot;<br>rm -f calico.yaml<br>curl https://docs.projectcalico.org/v3.13/manifests/calico.yaml -O<br>kubectl apply -f calico.yaml<br></code></pre></td></tr></table></figure>
+
+<p><strong>检查 master 初始化结果</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 只在 master 节点执行</span><br><br><span class="hljs-meta">#</span><span class="bash"> 执行如下命令，等待 3-10 分钟，直到所有的容器组处于 Running 状态</span><br>watch kubectl get pod -n kube-system -o wide<br><br><span class="hljs-meta">#</span><span class="bash"> 查看 master 节点初始化结果</span><br>kubectl get nodes -o wide<br></code></pre></td></tr></table></figure>
+
+<h2 id="初始化-worker节点"><a href="#初始化-worker节点" class="headerlink" title="初始化 worker节点"></a>初始化 worker节点</h2><h3 id="获得-join命令参数"><a href="#获得-join命令参数" class="headerlink" title="获得 join命令参数"></a>获得 join命令参数</h3><p><strong>在 master 节点上执行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubeadm token create --print-join-command<br></code></pre></td></tr></table></figure>
+<p>可获取kubeadm join 命令及参数，如下所示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubeadm join apiserver.demo:6443 --token mpfjma.4vjjg8flqihor4vt     --discovery-token-ca-cert-hash sha256:6f7a8e40a810323672de5eee6f4d19aa2dbdb38411845a1bf5dd63485c43d303<br></code></pre></td></tr></table></figure>
+
+<h3 id="初始化worker"><a href="#初始化worker" class="headerlink" title="初始化worker"></a>初始化worker</h3><p><strong>针对所有的 worker 节点执行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 只在 worker 节点执行</span><br><span class="hljs-meta">#</span><span class="bash"> 替换 x.x.x.x 为 master 节点的内网 IP</span><br>export MASTER_IP=x.x.x.x<br><span class="hljs-meta">#</span><span class="bash"> 替换 apiserver.demo 为初始化 master 节点时所使用的 APISERVER_NAME</span><br>export APISERVER_NAME=apiserver.demo<br>echo &quot;$&#123;MASTER_IP&#125;    $&#123;APISERVER_NAME&#125;&quot; &gt;&gt; /etc/hosts<br><br><span class="hljs-meta">#</span><span class="bash"> 替换为 master 节点上 kubeadm token create 命令的输出</span><br>kubeadm join apiserver.demo:6443 --token mpfjma.4vjjg8flqihor4vt     --discovery-token-ca-cert-hash sha256:6f7a8e40a810323672de5eee6f4d19aa2dbdb38411845a1bf5dd63485c43d303<br> <br></code></pre></td></tr></table></figure>
+
+<h3 id="检查初始化结果"><a href="#检查初始化结果" class="headerlink" title="检查初始化结果"></a>检查初始化结果</h3><p>在 master 节点上执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">kubectl get nodes -o wide<br></code></pre></td></tr></table></figure>
+
+<p>输出结果如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">[root@k8s-master ~]# kubectl get nodes<br>NAME         STATUS   ROLES    AGE     VERSION<br>k8s-master   Ready    master   3m46s   v1.17.4<br>k8s-node     Ready    &lt;none&gt;   2m20s   v1.17.4<br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ops/">ops</a>
+                    
+                      <a class="hover-with-bg" href="/tags/kubernetes/">kubernetes</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/23/kong-jwt/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Kong 基本用法 + JWT</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/09/05/using-dependency-queries/">
+                        <span class="hidden-mobile">使用依赖关系查询</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

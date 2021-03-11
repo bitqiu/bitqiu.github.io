@@ -15,12 +15,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="">
+    <meta name="description" content="有没有发现有时候你会有依赖关系查询的需求，比如：评论大于5的所有文章，那么评论是文章的关系，所以这种我们称为依赖关系查询。">
   
   <meta name="author" content="Bitqiu">
   <meta name="keywords" content="">
   
-  <title>Hello World - Bitqiu Blog</title>
+  <title>使用依赖关系查询 - Bitqiu Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -111,18 +111,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
@@ -138,18 +126,6 @@
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
               </a>
             </li>
           
@@ -177,7 +153,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="使用依赖关系查询">
               
             </span>
 
@@ -187,8 +163,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-11 10:02" pubdate>
-        2021年3月11日 上午
+      <time datetime="2015-09-05 00:00" pubdate>
+        2015年9月5日 凌晨
       </time>
     </span>
   
@@ -199,7 +175,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      176 字
     </span>
   
 
@@ -209,7 +185,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -239,28 +215,23 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">使用依赖关系查询</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+              <p>有没有发现有时候你会有依赖关系查询的需求，比如：<em>评论大于5的所有文章</em>，那么评论是文章的关系，所以这种我们称为依赖关系查询，下面举例一个：</p>
+<h3 id="查出所有包含了-laravel-这个标签的所有文章"><a href="#查出所有包含了-laravel-这个标签的所有文章" class="headerlink" title="查出所有包含了[laravel]这个标签的所有文章"></a>查出所有包含了[laravel]这个标签的所有文章</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><br><span class="hljs-comment">// Post model</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Eloquent</span> </span>&#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tags</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;belongsToMany(<span class="hljs-string">&#x27;Tag&#x27;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// Tag model</span><br>class Tag extends Eloquent()<br>&#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">posts</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;belongsToMany(<span class="hljs-string">&#x27;Post&#x27;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 查询自上周发布以来包含了 `laravel` 标签的所有文章</span><br><span class="hljs-variable">$posts</span> = Post::whereHas(<span class="hljs-string">&#x27;tags&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-variable">$query</span></span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-variable">$query</span>-&gt;where(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-string">&#x27;laravel&#x27;</span>);<br>&#125;)-&gt;where(<span class="hljs-string">&#x27;published_at&#x27;</span>, <span class="hljs-string">&#x27; &gt;= &#x27;</span>, Carbon\Carbon::now()-&gt;subWeek())-&gt;get();<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/php/">php</a>
+                    
+                  </div>
                 
               </div>
               
@@ -275,9 +246,21 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2020/03/11/use-kubeadm-install-kubernetes/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用 kubeadm 安装 kubernetes</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2015/06/09/sync-your-laravel-project/">
+                        <span class="hidden-mobile">让你的 Laravel 应用与官方保持同步</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

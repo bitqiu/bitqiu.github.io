@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="到目前为止这可能是最准确的一个解决方案了，大GitHub上各种找，没有一个好用的，大部分都只是汉字转拼音,所以我造了这个轮子...">
+  
+  <meta name="author" content="Bitqiu">
+  <meta name="keywords" content="">
+  
+  <title>PHP汉字转拼音更准确的解决方案 - Bitqiu Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.bitqiu.cc","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Bitqiu Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="PHP汉字转拼音更准确的解决方案">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2014-10-06 00:00" pubdate>
+        2014年10月6日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      968 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">PHP汉字转拼音更准确的解决方案</h1>
+            
+            <div class="markdown-body">
+              <p>到目前为止这可能是最准确的一个解决方案了，大GitHub上各种找，没有一个好用的，大部分都只是汉字转拼音，所以包含多音字的结果基本都错误。当然也有基于词典的转换工具，不过还是解决不了词库不全造成的多音字问题（当然，完全解决是不太可能的，或者词库会无比的大）。比如<code>康熙来了</code> 大部分工具的试用结果是：kang xi lai liao.</p>
+<p>基于上面的原因，我造了下面这个轮子。特点如下:</p>
+<ul>
+<li>基于<a target="_blank" rel="noopener" href="http://cc-cedict.org/wiki/">CC-CEDICT</a>.词典，解决大部分词汇问题；</li>
+<li>添加补充词典，解决CC-CEDICT不全或者不准确的问题；</li>
+<li>添加词频表，根据使用频率再一步提高多音字的准确度；</li>
+</ul>
+<h1 id="Pinyin"><a href="#Pinyin" class="headerlink" title="Pinyin"></a><a target="_blank" rel="noopener" href="http://overtrue.me/pinyin">Pinyin</a></h1><p>主页：<a target="_blank" rel="noopener" href="http://overtrue.me/pinyin">http://overtrue.me/pinyin</a></p>
+<p>基于CC-CEDICT词典的中文转拼音工具, 更准确的汉字转拼音解决方案。 <a target="_blank" rel="noopener" href="http://cc-cedict.org/wiki/">CC-CEDICT</a>.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">use</span> \<span class="hljs-title">Overtrue</span>\<span class="hljs-title">Pinyin</span>;<br><br><span class="hljs-keyword">echo</span> Pinyin::pinyin(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>);<br><span class="hljs-comment">// dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo</span><br><br><span class="hljs-comment">//多音字</span><br><span class="hljs-comment">// 了</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;了然&#x27;</span>); <span class="hljs-comment">// liǎo rán</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;来了&#x27;</span>); <span class="hljs-comment">// lái le</span><br><br><span class="hljs-comment">// 还</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;还有&#x27;</span>); <span class="hljs-comment">// hái yǒu</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;交还&#x27;</span>); <span class="hljs-comment">// jiāo huán</span><br><br><span class="hljs-comment">// 什</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;什么&#x27;</span>); <span class="hljs-comment">// shén me</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;什锦&#x27;</span>); <span class="hljs-comment">// shí jǐn</span><br><br><span class="hljs-comment">// 便</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;便当&#x27;</span>); <span class="hljs-comment">// biàn dāng</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;便宜&#x27;</span>); <span class="hljs-comment">// pián yí</span><br><br><span class="hljs-comment">// 剥</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;剥皮&#x27;</span>); <span class="hljs-comment">// bāo pí</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;剥皮器&#x27;</span>); <span class="hljs-comment">// bō pí qì</span><br><br><span class="hljs-comment">// 不</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;赔不是&#x27;</span>); <span class="hljs-comment">// péi bú shi</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;跑了和尚，跑不了庙&#x27;</span>); <span class="hljs-comment">// pǎo le hé shàng , pǎo bù liǎo miào</span><br><br><span class="hljs-comment">// 降</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;降温&#x27;</span>); <span class="hljs-comment">// jiàng wēn</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;投降&#x27;</span>); <span class="hljs-comment">// tóu xiáng</span><br><br><span class="hljs-comment">// 都</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;首都&#x27;</span>); <span class="hljs-comment">// shǒu dū</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;都什么年代了&#x27;</span>); <span class="hljs-comment">// dōu shén me nián dài le</span><br><br><span class="hljs-comment">// 乐</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;快乐&#x27;</span>); <span class="hljs-comment">// kuài lè</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;音乐&#x27;</span>); <span class="hljs-comment">// yīn yuè</span><br><br><span class="hljs-comment">// 长</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;成长&#x27;</span>); <span class="hljs-comment">// chéng zhǎng</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;长江&#x27;</span>); <span class="hljs-comment">// cháng jiāng</span><br><br><span class="hljs-comment">// 难</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;难民&#x27;</span>); <span class="hljs-comment">// nàn mín</span><br>Pinyin::pinyin(<span class="hljs-string">&#x27;难过&#x27;</span>); <span class="hljs-comment">// nán guò</span><br>...<br><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
+<li>使用 Composer 安装:</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">composer require overtrue/pinyin &gt;=1.4<br></code></pre></td></tr></table></figure>
+
+<p>或者在你的项目composer.json加入：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&#123;<br>    <span class="hljs-string">&quot;require&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;overtrue/pinyin&quot;</span>: <span class="hljs-string">&quot;&gt;=1.4&quot;</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>直接下载文件 <code>src/Overtrue/Pinyin.php</code> 引入到项目中。</li>
+</ol>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">use</span> \<span class="hljs-title">Overtrue</span>\<span class="hljs-title">Pinyin</span>;<br><br><span class="hljs-comment">//获取拼音</span><br><span class="hljs-keyword">echo</span> Pinyin::pinyin(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>);<br><span class="hljs-comment">//或者: Overtrue\pinyin($string);</span><br><span class="hljs-comment">// dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo</span><br><br><span class="hljs-comment">//获取首字母</span><br><span class="hljs-keyword">echo</span> Pinyin::letter(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>);<br><span class="hljs-comment">// D Z X W Q L X B D D Z D G M H</span><br><br></code></pre></td></tr></table></figure>
+
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><ul>
+<li><code>delimiter</code> 分隔符，默认为一个空格 ‘ ‘；</li>
+<li><code>traditional</code> 繁体</li>
+<li><code>accent</code> 是否输出音调；</li>
+<li><code>letter</code> 只输出首字母，或者直接使用<code>Pinyin::letter($string)</code>;</li>
+<li><code>only_chinese</code> 只保留$string中中文部分。</li>
+</ul>
+<ul>
+<li><p>全局设置：*  <code>Pinyin::set(&#39;delimiter&#39;, &#39;-&#39;);</code></p>
+</li>
+<li><p>临时设置：*  <code>Pinyin::pinyin($word, $settings)</code> 在调用的方法后传参</p>
+</li>
+</ul>
+<p>example:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><br>Pinyin::set(<span class="hljs-string">&#x27;delimiter&#x27;</span>, <span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-comment">//全局</span><br><span class="hljs-keyword">echo</span> Pinyin::pinyin(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>);<br><br><span class="hljs-comment">// dài-zhe-xī-wàng-qù-lǔ-xíng-bǐ-dào-dá-zhōng-diǎn-gèng-měi-hǎo</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs php"><br><span class="hljs-variable">$setting</span> = [<br>            <span class="hljs-string">&#x27;delimiter&#x27;</span> =&gt; <span class="hljs-string">&#x27;-&#x27;</span>,<br>            <span class="hljs-string">&#x27;accent&#x27;</span> =&gt; <span class="hljs-literal">false</span>,<br>           ];<br><br><span class="hljs-keyword">echo</span> Pinyin::pinyin(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>, <span class="hljs-variable">$setting</span>);<span class="hljs-comment">//这里的setting只是临时修改，并非全局设置</span><br><br><span class="hljs-comment">// dai-zhe-xi-wang-qu-lu-xing-bi-dao-da-zhong-dian-geng-mei-hao</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php">Pinyin::set(<span class="hljs-string">&#x27;accent&#x27;</span>, <span class="hljs-literal">false</span>);<br><span class="hljs-keyword">echo</span> Pinyin::pinyin(<span class="hljs-string">&#x27;带着希望去旅行，比到达终点更美好&#x27;</span>);<br><br><span class="hljs-comment">// dai zhe xi wang qu lu xing bi dao da zhong dian geng mei hao</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="Contribution"><a href="#Contribution" class="headerlink" title="Contribution"></a>Contribution</h1><p>欢迎提意见及完善补充词库 <code>src/Overtrue/data/additional.php</code>! :kiss:</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://cc-cedict.org/wiki/">CC-CEDICT</a></li>
+<li><a target="_blank" rel="noopener" href="http://mmc.sinica.edu.tw/intro_c_01.html">現代漢語語音語料庫</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.zdic.net/">汉典</a></li>
+</ul>
+<h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>MIT</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/php/">php</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2014/10/12/php-variable-principle/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">PHP的弱类型实现</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2014/10/04/github-windows-https-error/">
+                        <span class="hidden-mobile">GitHub windows客户端报https错误解决办法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

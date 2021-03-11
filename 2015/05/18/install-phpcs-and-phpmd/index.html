@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的安装与配置">
+  
+  <meta name="author" content="Bitqiu">
+  <meta name="keywords" content="">
+  
+  <title>PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置 - Bitqiu Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.bitqiu.cc","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Bitqiu Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-05-18 00:00" pubdate>
+        2015年5月18日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      568 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置</h1>
+            
+            <div class="markdown-body">
+              <h2 id="PHPCS"><a href="#PHPCS" class="headerlink" title="PHPCS"></a>PHPCS</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>有以下方式安装 PHPCS:</p>
+<h5 id="使用-composer"><a href="#使用-composer" class="headerlink" title="使用 composer:"></a>使用 <code>composer</code>:</h5><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">composer</span> <span class="hljs-meta">global</span> <span class="hljs-meta">require</span> <span class="hljs-string">&quot;squizlabs/php_codesniffer=*&quot;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意，你可能需要将 <code>~/.composer/vendor/bin/</code> 添加到 PATH 环境变量中，否则会报命令找不到。</p>
+</blockquote>
+<h5 id="使用-PEAR"><a href="#使用-PEAR" class="headerlink" title="使用 PEAR:"></a>使用 PEAR:</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pear <span class="hljs-keyword">install</span> PHP_CodeSniffer<br></code></pre></td></tr></table></figure>
+
+<h5 id="下载安装："><a href="#下载安装：" class="headerlink" title="下载安装："></a>下载安装：</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar<br>php phpcs.phar -h<br>curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar<br>php phpcbf.phar -h<br></code></pre></td></tr></table></figure>
+
+<p>  然后移动到命令目录：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">mv phpcs.phar /usr/bin/phpcs<br>mv phpcbf.phar /usr/bin/phpcbf<br>// 也许上面需要 sudo<br>chmod +x /usr/bin/phpcs<br>chmod +x /usr/bin/phpcbf<br></code></pre></td></tr></table></figure>
+
+<p>  这里的 <code>phpcbf</code> 是代码修复工具。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="查看帮助："><a href="#查看帮助：" class="headerlink" title="查看帮助："></a>查看帮助：</h5><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">phpcs <span class="hljs-comment">--help</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="添加标准："><a href="#添加标准：" class="headerlink" title="添加标准："></a>添加标准：</h5><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">phpcs --<span class="hljs-built_in">config</span>-<span class="hljs-built_in">set</span> installed_paths PATH_TO_SEARCH_STANDARDS<br></code></pre></td></tr></table></figure>
+
+<p>注意：假设标准为 <code>Weibo</code>, 目录为:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/Users/</span>overtrue<span class="hljs-regexp">/code_standards/</span>Weibo<br></code></pre></td></tr></table></figure>
+
+<p>  其中<code>Weibo</code> 里才是 <code>ruleset.xml</code>，那么对应上面的 <code>PATH_TO_SEARCH_STANDARDS</code> 应该为：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">phpcs --<span class="hljs-built_in">config</span>-<span class="hljs-built_in">set</span> installed_paths /Users/overtrue/code_standards<br></code></pre></td></tr></table></figure>
+
+<h5 id="查看已经安装的标准："><a href="#查看已经安装的标准：" class="headerlink" title="查看已经安装的标准："></a>查看已经安装的标准：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">phpcs -<span class="hljs-selector-tag">i</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="查看配置："><a href="#查看配置：" class="headerlink" title="查看配置："></a>查看配置：</h5><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">phpcs <span class="hljs-comment">--config-show</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="检查代码规范："><a href="#检查代码规范：" class="headerlink" title="检查代码规范："></a>检查代码规范：</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">phpcs .<span class="hljs-regexp">/codes/</span>Example.php<br><span class="hljs-regexp">//</span> or<br>phpcs .<span class="hljs-regexp">/codes/</span><br></code></pre></td></tr></table></figure>
+
+<p>  指定标准：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">phpcs .<span class="hljs-regexp">/codes/</span>Example.php --standard=PSR2<br></code></pre></td></tr></table></figure>
+
+<p>  报告格式：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">phpcs <span class="hljs-attribute">--report</span>=summary /path/<span class="hljs-keyword">to</span>/code<br></code></pre></td></tr></table></figure>
+
+<p>  可用的格式有（默认为: <code>full</code>）：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">full</span>, <span class="hljs-type">xml</span>, checkstyle, csv<br><span class="hljs-type">json</span>, emacs, source, <span class="hljs-keyword">summary</span>, diff<br>svnblame, gitblame, hgblame <span class="hljs-keyword">or</span> notifysend<br></code></pre></td></tr></table></figure>
+
+<h5 id="修复代码"><a href="#修复代码" class="headerlink" title="修复代码"></a>修复代码</h5><p> 第一种：使用 diff 形式打补丁：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">phpcs --report-diff=/path/to/changes.diff /path/to/code<br>patch -p0 -ui /path/to/changes.diff<br><span class="hljs-comment"># patching file /path/to/code/file.php</span><br></code></pre></td></tr></table></figure>
+
+<p> 第二种：使用 PHP Code Beautifier 和 Fixer：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">phpcbf <span class="hljs-regexp">/path/</span>to/code<br></code></pre></td></tr></table></figure>
+
+<p>  以上命令会自动修复原文件，如果不想直接覆盖原文件，可以使用 <code>--suffix</code> 指定修复后的代码后缀：</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">phpcs <span class="hljs-string">/path/to/code</span> <span class="hljs-params">--suffix=</span><span class="hljs-string">.fixed</span><br></code></pre></td></tr></table></figure>
+
+<p>更多 PHPCS 的使用请参考：<a target="_blank" rel="noopener" href="https://github.com/squizlabs/PHP_CodeSniffer/wiki">https://github.com/squizlabs/PHP_CodeSniffer/wiki</a></p>
+<h2 id="PHPMD"><a href="#PHPMD" class="headerlink" title="PHPMD"></a>PHPMD</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>同样有以下安装方式：</p>
+<h5 id="下载-phar-文件安装："><a href="#下载-phar-文件安装：" class="headerlink" title="下载 phar 文件安装："></a>下载 <code>phar</code> 文件安装：</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">wget -c http://static.phpmd.org/php/latest/phpmd.phar<br>mv phpmd.phar /usr/bin/phpmd<br>chmod +x /usr/bin/phpmd<br></code></pre></td></tr></table></figure>
+
+<h5 id="使用-Composer-安装："><a href="#使用-Composer-安装：" class="headerlink" title="使用 Composer 安装："></a>使用 <code>Composer</code> 安装：</h5><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">composer</span> <span class="hljs-meta">global</span> <span class="hljs-meta">require</span> phpmd/phpmd<br></code></pre></td></tr></table></figure>
+
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>检查代码质量：</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># phpmd 代码路径 报告格式</span><br>phpmd /path/<span class="hljs-keyword">to</span>/source <span class="hljs-built_in">text</span><br></code></pre></td></tr></table></figure>
+
+<p>  或者指定要检查的规则：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># phpmd 代码路径 报告格式 规则列表</span><br>phpmd /path/<span class="hljs-keyword">to</span>/source <span class="hljs-built_in">text</span> codesize,unusedcode,naming<br></code></pre></td></tr></table></figure>
+
+<p>  或者使用xml指定检查规则：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># phpmd 代码路径 报告格式 规则xml文件</span><br>phpmd <span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/source text /</span>phpmd_ruleset.xml<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>报告格式有：<ul>
+<li>xml, 以 XML 格式输出；</li>
+<li>text, 简单的文本格式；</li>
+<li>html, 输出到单个的html；</li>
+</ul>
+</li>
+</ul>
+<p>这里有一个phpmd规则可参考：<a target="_blank" rel="noopener" href="https://github.com/overtrue/phpmd-rulesets">https://github.com/overtrue/phpmd-rulesets</a></p>
+<p>更多关于 PHPMD 的使用请参考：<a target="_blank" rel="noopener" href="http://phpmd.org/documentation/index.html">http://phpmd.org/documentation/index.html</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/php/">php</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/06/09/sync-your-laravel-project/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">让你的 Laravel 应用与官方保持同步</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/05/08/cannot-find-command-sudo-hu/">
+                        <span class="hidden-mobile">sudo -Hu 执行时找不到命令的问题解决</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

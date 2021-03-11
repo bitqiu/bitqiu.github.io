@@ -15,14 +15,30 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="">
+    <meta name="description" content="数据库设计和查询优化、服务器端优化以及存储引擎的选择，缓存优化技巧。">
   
   <meta name="author" content="Bitqiu">
   <meta name="keywords" content="">
   
-  <title>友链 - Bitqiu Blog</title>
+  <title>MySQL性能优化小结 - Bitqiu Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -50,7 +66,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -137,9 +153,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="友情链接">
+            <span class="h2" id="subtitle" title="MySQL性能优化小结">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2014-10-01 00:00" pubdate>
+        2014年10月1日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      555 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      6
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -152,79 +205,164 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MySQL性能优化小结</h1>
+            
+            <div class="markdown-body">
+              <h1 id="一-数据库设计和查询优化"><a href="#一-数据库设计和查询优化" class="headerlink" title="一.数据库设计和查询优化"></a>一.数据库设计和查询优化</h1><ol>
+<li>Schema设计时主要考虑:标准化,数据类型,索引.<ul>
+<li>一个数据库设计可以混合使用,一部分表格标准化,一部分表格非标准化.(非标准化表格适当冗余)</li>
+<li>最优的数据类型,使表在磁盘上占据的空间尽可能小,读写快,占用内存少.(索引也尽量建立在较小的列上)</li>
+<li>正确索引,提高Select,Update,Delete性能.</li>
+</ul>
+</li>
+<li>不同的Sql不同的优化方案<ul>
+<li>Explain Sql查看结果,分析查询.</li>
+<li>查询使用匹配的类型.</li>
+<li>使用long-slow-queries记录较慢查询,分析优化.</li>
+</ul>
+</li>
+</ol>
+<h1 id="二-服务器端优化"><a href="#二-服务器端优化" class="headerlink" title="二.服务器端优化"></a>二.服务器端优化</h1><ol>
+<li>安装适当的MySql版本.<br>如果服务器使用Intel处理器,使用Intel C++版本可提高30 %效率</li>
+<li>配置优化.<br>常见优化项:</li>
+</ol>
+<ul>
+<li><code>charset</code>  </li>
+<li><code>max_allowed_packet</code>  </li>
+<li><code>max_connections</code>  </li>
+<li><code>table_cache_size</code>  </li>
+<li><code>query_cache_size</code></li>
+</ul>
+<p>三.存储引擎优化</p>
+<ul>
+<li><strong>MyISAM</strong><ol>
+<li>引擎特点<ul>
+<li>不支持事务,提供高速存储,检索以及全文搜索能力.</li>
+<li>宕机会破坏表.</li>
+<li>使用的磁盘和内存空间小.</li>
+<li>基于表的锁,并发更新数据会出现严重性能问题.</li>
+<li>MySql只缓存索引,数据由OS缓存.</li>
+</ul>
+</li>
+<li>适用情况<ul>
+<li>日志系统.</li>
+<li>只读操作或者大部分读操作.</li>
+<li>全表扫描.</li>
+<li>批量导入数据.</li>
+<li>没有事务的低并发读写.</li>
+</ul>
+</li>
+<li>优化策略<ul>
+<li>NOT NULL,可以减少磁盘存储.</li>
+<li>Optimize Table,碎片整理,回收空闲空间.</li>
+<li>Deleting/updating/adding大量数据的时候禁止使用index.</li>
+<li>参数优化,key_buffer_size_variable索引缓存设置.</li>
+<li>避免并发Inset Update.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>InnoDB</strong><ol>
+<li>引擎特点<ul>
+<li>具有提交,回滚和崩溃恢复能力的事务安全存储引擎.</li>
+<li>处理巨大数据量性能卓越,它的CPU使用效率非常高.</li>
+<li>需要更多的内存和磁盘存储空间.</li>
+<li>数据和索引都缓存在内存中.</li>
+</ul>
+</li>
+<li>适用情况<ul>
+<li>需要事务的应用.</li>
+<li>高并发的应用.</li>
+<li>自动恢复.</li>
+<li>较快速的基于主键的操作.</li>
+</ul>
+</li>
+<li>优化策略<ul>
+<li>尽量使用short,integer的主键.</li>
+<li>使用prefix keys,因为InnoDB没有key压缩功能.</li>
+<li>参数优化,innodb_buffer_pool_size,innodb_data_home_dir等等.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="三-缓存优化"><a href="#三-缓存优化" class="headerlink" title="三. 缓存优化"></a>三. 缓存优化</h1><ol>
+<li>Memcached</li>
+<li>Redis</li>
+</ol>
+<p>转自： <a target="_blank" rel="noopener" href="http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/">http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-
-<div class="row links">
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Blog" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Blog</div>
-            <div class="link-intro">主题博客</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/docs/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Docs" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Docs</div>
-            <div class="link-intro">主题使用指南</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Repo" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Repo</div>
-            <div class="link-intro">主题 GitHub 仓库</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-</div>
-
-
-
-
-
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/mysql/">mysql</a>
+                    
+                  </div>
+                
               </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2014/10/04/github-windows-https-error/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">GitHub windows客户端报https错误解决办法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -304,9 +442,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 

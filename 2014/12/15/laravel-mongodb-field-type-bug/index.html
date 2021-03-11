@@ -15,14 +15,30 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="">
+    <meta name="description" content="jenssegers/laravel-mongodb与MySQL关联查询时字段类型不一致导致查询不到结果的问题解决。">
   
   <meta name="author" content="Bitqiu">
   <meta name="keywords" content="">
   
-  <title>友链 - Bitqiu Blog</title>
+  <title>Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案 - Bitqiu Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -50,7 +66,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -137,9 +153,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="友情链接">
+            <span class="h2" id="subtitle" title="Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2014-12-15 00:00" pubdate>
+        2014年12月15日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      246 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -152,79 +205,101 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案</h1>
+            
+            <div class="markdown-body">
+              <p>当我们在存储mongo数据的时候，整型字段存储的值为<code>NumberLong</code>格式，那么如果这个id来自于MySQL，在使用MySQL模型与MongoDB关联查询时就会踩到这个坑，从jenssegers/laravel-mongodb生成的SQL可以看到类似这样的结果：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">...&#123;&quot;object_id&quot;:&#123;&quot;$in&quot;:[&quot;13&quot;, &quot;15&quot;]&#125;&#125;...<br></code></pre></td></tr></table></figure>
+
+<p>可是我们的期望是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">...&#123;&quot;object_id&quot;:&#123;&quot;$in&quot;:[13, 15]&#125;&#125;...<br></code></pre></td></tr></table></figure>
+
+<p>这里的13、15是MySQL里的一条记录，在mongo里的值为<code>NumberLong(13)</code>， 所以查询结果永远为空。<br>找遍了源码，没有一个更好的解决方法，后来只能使用Eloquent模型提供的<a target="_blank" rel="noopener" href="http://v4.golaravel.com/docs/4.2/eloquent#accessors-and-mutators"><strong>属性修改器</strong></a>来实现：</p>
+<p>在<strong>MySQL的模型里</strong>对相应字段使用修改器(这里以id为例)：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 避免与mongo关联时id转为字符的问题</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> string $id</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> int</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getIdAttribute</span>(<span class="hljs-params"><span class="hljs-variable">$id</span></span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> intval(<span class="hljs-variable">$id</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>方法名：<code>get属性名大驼峰Attribute</code>, ex: <code>object_id</code> -&gt; <code>getObjectIdAttribute</code></p>
+<p>框架源码参考：<a target="_blank" rel="noopener" href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Model.php#L2409-L2419">getAttribute</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-
-<div class="row links">
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Blog" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Blog</div>
-            <div class="link-intro">主题博客</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/docs/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Docs" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Docs</div>
-            <div class="link-intro">主题使用指南</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" alt="Fluid Repo" onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Repo</div>
-            <div class="link-intro">主题 GitHub 仓库</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-</div>
-
-
-
-
-
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/php/">php</a>
+                    
+                      <a class="hover-with-bg" href="/tags/laravel/">laravel</a>
+                    
+                  </div>
+                
               </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/03/19/get-current-controller-of-laravel/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Laravel 获取当前控制器名称或方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2014/10/12/mysql-explain/">
+                        <span class="hidden-mobile">MySQL中EXPLAIN命令详解</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -304,9 +379,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
