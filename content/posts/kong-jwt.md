@@ -3,6 +3,9 @@ title: Kong 基本用法 + JWT
 date: 2020-03-23 11:02:02
 tags:
     - gateway
+    - kong
+    - nginx
+    - lua
 ---
 <!--more-->
 ## 配置服务
