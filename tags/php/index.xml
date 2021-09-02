@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>php on Bitqiu</title>
+    <link>https://blog.bitqiu.cc/tags/php/</link>
+    <description>Recent content in php on Bitqiu</description>
+    <image>
+      <url>https://blog.bitqiu.cc/blog-cover.png</url>
+      <link>https://blog.bitqiu.cc/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 05 Sep 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用依赖关系查询</title>
+      <link>https://blog.bitqiu.cc/posts/using-dependency-queries/</link>
+      <pubDate>Sat, 05 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/using-dependency-queries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>让你的 Laravel 应用与官方保持同步</title>
+      <link>https://blog.bitqiu.cc/posts/sync-your-laravel-project/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/sync-your-laravel-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置</title>
+      <link>https://blog.bitqiu.cc/posts/install-phpcs-and-phpmd/</link>
+      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/install-phpcs-and-phpmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>处理 Laravel 5 默认事件</title>
+      <link>https://blog.bitqiu.cc/posts/laravel-login-event-handler/</link>
+      <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/laravel-login-event-handler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laravel 获取当前控制器名称或方法</title>
+      <link>https://blog.bitqiu.cc/posts/get-current-controller-of-laravel/</link>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/get-current-controller-of-laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案</title>
+      <link>https://blog.bitqiu.cc/posts/laravel-mongodb-field-type-bug/</link>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/laravel-mongodb-field-type-bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP的弱类型实现</title>
+      <link>https://blog.bitqiu.cc/posts/php-variable-principle/</link>
+      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/php-variable-principle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP汉字转拼音更准确的解决方案</title>
+      <link>https://blog.bitqiu.cc/posts/php-chinese-to-pinyin/</link>
+      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/php-chinese-to-pinyin/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

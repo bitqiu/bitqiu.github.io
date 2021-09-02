@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>linux on Bitqiu</title>
+    <link>https://blog.bitqiu.cc/tags/linux/</link>
+    <description>Recent content in linux on Bitqiu</description>
+    <image>
+      <url>https://blog.bitqiu.cc/blog-cover.png</url>
+      <link>https://blog.bitqiu.cc/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 08 May 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sudo -Hu 执行时找不到命令的问题解决</title>
+      <link>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</link>
+      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</guid>
+      <description>在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法</description>
+    </item>
+    
+  </channel>
+</rss>

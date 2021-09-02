@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ops on Bitqiu</title>
+    <link>https://blog.bitqiu.cc/tags/ops/</link>
+    <description>Recent content in ops on Bitqiu</description>
+    <image>
+      <url>https://blog.bitqiu.cc/blog-cover.png</url>
+      <link>https://blog.bitqiu.cc/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Mar 2021 11:18:20 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/ops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 kubeadm 安装 kubernetes</title>
+      <link>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</link>
+      <pubDate>Tue, 16 Mar 2021 11:18:20 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sudo -Hu 执行时找不到命令的问题解决</title>
+      <link>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</link>
+      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</guid>
+      <description>在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kubernetes on Bitqiu</title>
+    <link>https://blog.bitqiu.cc/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on Bitqiu</description>
+    <image>
+      <url>https://blog.bitqiu.cc/blog-cover.png</url>
+      <link>https://blog.bitqiu.cc/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Mar 2021 11:18:20 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 kubeadm 安装 kubernetes</title>
+      <link>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</link>
+      <pubDate>Tue, 16 Mar 2021 11:18:20 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

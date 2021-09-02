@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mysql on Bitqiu</title>
+    <link>https://blog.bitqiu.cc/tags/mysql/</link>
+    <description>Recent content in mysql on Bitqiu</description>
+    <image>
+      <url>https://blog.bitqiu.cc/blog-cover.png</url>
+      <link>https://blog.bitqiu.cc/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Oct 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL中EXPLAIN命令详解</title>
+      <link>https://blog.bitqiu.cc/posts/mysql-explain/</link>
+      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/mysql-explain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL性能优化小结</title>
+      <link>https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
