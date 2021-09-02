@@ -1,6 +1,6 @@
 baseURL: https://blog.bitqiu.cc/
 title: Bitqiu
-paginate: 5
+paginate: 10
 theme: PaperMod
 
 enableInlineShortcodes: true
