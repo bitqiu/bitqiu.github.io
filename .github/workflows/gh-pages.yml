@@ -3,7 +3,7 @@ name: Build GH-Pages
 on:
   push:
     branches:
-      - hugo
+      - main
   workflow_dispatch:
     # manual run
 
@@ -14,7 +14,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
         with:
-          ref: hugo
+          ref: main
 
       - name: Get Theme
         run: git submodule update --init --recursive
