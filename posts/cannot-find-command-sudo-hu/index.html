@@ -80,7 +80,7 @@ sudo -Hu 执行时找不到命令的问题解决
 <div class=post-description>
 在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法
 </div>
-<div class=post-meta>May 8, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/hugo/content/posts/cannot-find-command-sudo-hu.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta>May 8, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/cannot-find-command-sudo-hu.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header>
 <div class=post-content><p>虽然在 <code>/etc/profile</code> 中加了全局 <code>PATH</code>，但是在以 <code>sudo -Hu [username] [command]</code> 执行的时候报命令不存在，原因是 <code>/etc/sudoers</code> 中还有一个 <code>secure_path</code> 没修改：</p>
