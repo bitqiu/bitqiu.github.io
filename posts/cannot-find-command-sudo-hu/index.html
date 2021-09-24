@@ -6,9 +6,9 @@
 <title>sudo -Hu 执行时找不到命令的问题解决 | Bitqiu</title>
 <meta name=keywords content="linux,ops">
 <meta name=description content="在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法">
-<meta name=author content="Bitqiu">
+<meta name=author content="bitqiu">
 <link rel=canonical href=https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.9f1d947375927e9847272b1f4e9be81336f539e513bf04d52cade31f81cad1af.css integrity="sha256-nx2Uc3WSfphHJysfTpvoEzb1OeUTvwTVLK3jH4HK0a8=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw+W8mWdq36u97PLc=" rel="preload stylesheet" as=style>
 <script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://blog.bitqiu.cc/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://blog.bitqiu.cc/favicon-16x16.png>
@@ -18,7 +18,10 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.88.1">
-<meta property="og:title" content="sudo -Hu 执行时找不到命令的问题解决">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="sudo -Hu 执行时找不到命令的问题解决">
 <meta property="og:description" content="在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/"><meta property="og:image" content="https://blog.bitqiu.cc/blog-cover.png"><meta property="article:section" content="posts">
@@ -29,14 +32,10 @@
 <meta name=twitter:title content="sudo -Hu 执行时找不到命令的问题解决">
 <meta name=twitter:description content="在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.bitqiu.cc/posts/"},{"@type":"ListItem","position":2,"name":"sudo -Hu 执行时找不到命令的问题解决","item":"https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"sudo -Hu 执行时找不到命令的问题解决","name":"sudo -Hu 执行时找不到命令的问题解决","description":"在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法","keywords":["linux","ops"],"articleBody":"虽然在 /etc/profile 中加了全局 PATH，但是在以 sudo -Hu [username] [command] 执行的时候报命令不存在，原因是 /etc/sudoers 中还有一个 secure_path 没修改：\nvisudo 查找 secure_path，加入你要添加的目录，比如 /usr/local/bin:\nDefaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin 改为：\nDefaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin 即可。\n","wordCount":"27","inLanguage":"en","datePublished":"2015-05-08T00:00:00Z","dateModified":"2015-05-08T00:00:00Z","author":{"@type":"Person","name":"Bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"sudo -Hu 执行时找不到命令的问题解决","name":"sudo -Hu 执行时找不到命令的问题解决","description":"在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法","keywords":["linux","ops"],"articleBody":"虽然在 /etc/profile 中加了全局 PATH，但是在以 sudo -Hu [username] [command] 执行的时候报命令不存在，原因是 /etc/sudoers 中还有一个 secure_path 没修改：\nvisudo 查找 secure_path，加入你要添加的目录，比如 /usr/local/bin:\nDefaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin 改为：\nDefaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin 即可。\n","wordCount":"27","inLanguage":"en","datePublished":"2015-05-08T00:00:00Z","dateModified":"2015-05-08T00:00:00Z","author":{"@type":"Person","name":"bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<noscript>
-<style type=text/css>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -80,7 +79,7 @@ sudo -Hu 执行时找不到命令的问题解决
 <div class=post-description>
 在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法
 </div>
-<div class=post-meta>May 8, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/cannot-find-command-sudo-hu.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta>May 8, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/cannot-find-command-sudo-hu.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header>
 <div class=post-content><p>虽然在 <code>/etc/profile</code> 中加了全局 <code>PATH</code>，但是在以 <code>sudo -Hu [username] [command]</code> 执行的时候报命令不存在，原因是 <code>/etc/sudoers</code> 中还有一个 <code>secure_path</code> 没修改：</p>

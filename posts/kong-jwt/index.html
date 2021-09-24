@@ -6,9 +6,9 @@
 <title>Kong 基本用法 + JWT | Bitqiu</title>
 <meta name=keywords content="gateway,kong,nginx,lua">
 <meta name=description content="Kong 基本用法 + JWT - Bitqiu">
-<meta name=author content="Bitqiu">
+<meta name=author content="bitqiu">
 <link rel=canonical href=https://blog.bitqiu.cc/posts/kong-jwt/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.9f1d947375927e9847272b1f4e9be81336f539e513bf04d52cade31f81cad1af.css integrity="sha256-nx2Uc3WSfphHJysfTpvoEzb1OeUTvwTVLK3jH4HK0a8=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw+W8mWdq36u97PLc=" rel="preload stylesheet" as=style>
 <script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://blog.bitqiu.cc/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://blog.bitqiu.cc/favicon-16x16.png>
@@ -18,7 +18,10 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.88.1">
-<meta property="og:title" content="Kong 基本用法 + JWT">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Kong 基本用法 + JWT">
 <meta property="og:description" content>
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.bitqiu.cc/posts/kong-jwt/"><meta property="og:image" content="https://blog.bitqiu.cc/blog-cover.png"><meta property="article:section" content="posts">
@@ -29,14 +32,10 @@
 <meta name=twitter:title content="Kong 基本用法 + JWT">
 <meta name=twitter:description content>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.bitqiu.cc/posts/"},{"@type":"ListItem","position":2,"name":"Kong 基本用法 + JWT","item":"https://blog.bitqiu.cc/posts/kong-jwt/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kong 基本用法 + JWT","name":"Kong 基本用法 \u002b JWT","description":"","keywords":["gateway","kong","nginx","lua"],"articleBody":"配置服务 添加 Service\ncurl -i -X POST \\  --url http://localhost:8001/services/ \\  --data 'name=api-gateway-sv' \\  --data 'url=https://blog.bitqiu.cc' 为服务添加路由\ncurl -i -X POST \\  --url http://localhost:8001/services/api-gateway-sv/routes \\  --data 'hosts[]=api.bitqiu.cc' 通过Kong转发您的请求\ncurl -i -X GET \\  --url http://localhost:8000/ \\  --header 'Host: api.bitqiu.cc' 配置 JWT service 开启 jwt 插件\n# 查看插件列表 curl -i -X GET \\ \t--url http://localhost:8000/ # 开启 jwt 插件 curl -i -X POST \\ \t--url http://localhost:8001/services/api-gateway-sv/plugins \\ \t--data 'name=jwt' 创建 consumer\ncurl -i -X POST \\ \t--url http://localhost:8000/consumers \\ \t--data 'username=bitqiu' 创建 jwt 凭证\n 可以指定算法algorithm，iss签发者key，密钥secret，也可以省略，会自动生成。\n curl -i -X POST \\ \t--url http://localhost:8000/consumers/bitqiu/jwt \\ \t--data 'algorithm=HS256' \\ \t--data 'key=bitqiu_key' \\ \t--data 'secret=uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u' # 查看 jwt 凭证 curl -i -X GET \\ \t--url http://localhost:8000/consumers/bitqiu/jwt # response { \"rsa_public_key\": null, \"created_at\": 1553681782, \"consumer\": { \"id\": \"2e34d380-ec48-4a0d-926f-6dd8696a7eca\" }, \"id\": \"61ee520c-3387-42f0-8e5f-02e0dc34d3d4\", \"algorithm\": \"HS256\", \"secret\": \"uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u\", \"key\": \"7Xc3L8TdFpU6kgPEeR4iqMAstqLewJSS\" } jwt 下发 业务服务器根据 kong 生成的 jwt 凭证中的 algorithm、key（iss）、secret进行 token 的演算和下发。请求鉴权接口需携带  Authorization: Bearer jwt 进行请求。测试的话可以用 https://jwt.io 生成：\ncurl -i -X GET \\  --url http://localhost:8000/ \\  --header 'Host: api.bitqiu.cc' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkb3dudG93bl9rZXkiLCJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.nDvZa6Nu9cLxO36jnXsHwYIxrNLrDomJgvKJ5gihn4k' ","wordCount":"163","inLanguage":"en","datePublished":"2020-03-23T11:02:02Z","dateModified":"2020-03-23T11:02:02Z","author":{"@type":"Person","name":"Bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/kong-jwt/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kong 基本用法 + JWT","name":"Kong 基本用法 \u002b JWT","description":"","keywords":["gateway","kong","nginx","lua"],"articleBody":"配置服务 添加 Service\ncurl -i -X POST \\  --url http://localhost:8001/services/ \\  --data 'name=api-gateway-sv' \\  --data 'url=https://blog.bitqiu.cc' 为服务添加路由\ncurl -i -X POST \\  --url http://localhost:8001/services/api-gateway-sv/routes \\  --data 'hosts[]=api.bitqiu.cc' 通过Kong转发您的请求\ncurl -i -X GET \\  --url http://localhost:8000/ \\  --header 'Host: api.bitqiu.cc' 配置 JWT service 开启 jwt 插件\n# 查看插件列表 curl -i -X GET \\ \t--url http://localhost:8000/ # 开启 jwt 插件 curl -i -X POST \\ \t--url http://localhost:8001/services/api-gateway-sv/plugins \\ \t--data 'name=jwt' 创建 consumer\ncurl -i -X POST \\ \t--url http://localhost:8000/consumers \\ \t--data 'username=bitqiu' 创建 jwt 凭证\n 可以指定算法algorithm，iss签发者key，密钥secret，也可以省略，会自动生成。\n curl -i -X POST \\ \t--url http://localhost:8000/consumers/bitqiu/jwt \\ \t--data 'algorithm=HS256' \\ \t--data 'key=bitqiu_key' \\ \t--data 'secret=uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u' # 查看 jwt 凭证 curl -i -X GET \\ \t--url http://localhost:8000/consumers/bitqiu/jwt # response { \"rsa_public_key\": null, \"created_at\": 1553681782, \"consumer\": { \"id\": \"2e34d380-ec48-4a0d-926f-6dd8696a7eca\" }, \"id\": \"61ee520c-3387-42f0-8e5f-02e0dc34d3d4\", \"algorithm\": \"HS256\", \"secret\": \"uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u\", \"key\": \"7Xc3L8TdFpU6kgPEeR4iqMAstqLewJSS\" } jwt 下发 业务服务器根据 kong 生成的 jwt 凭证中的 algorithm、key（iss）、secret进行 token 的演算和下发。请求鉴权接口需携带  Authorization: Bearer jwt 进行请求。测试的话可以用 https://jwt.io 生成：\ncurl -i -X GET \\  --url http://localhost:8000/ \\  --header 'Host: api.bitqiu.cc' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkb3dudG93bl9rZXkiLCJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.nDvZa6Nu9cLxO36jnXsHwYIxrNLrDomJgvKJ5gihn4k' ","wordCount":"163","inLanguage":"en","datePublished":"2020-03-23T11:02:02Z","dateModified":"2020-03-23T11:02:02Z","author":{"@type":"Person","name":"bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/kong-jwt/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<noscript>
-<style type=text/css>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -77,7 +76,7 @@
 <h1 class=post-title>
 Kong 基本用法 + JWT
 </h1>
-<div class=post-meta>March 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/kong-jwt.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta>March 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/kong-jwt.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>
 <details>

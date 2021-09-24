@@ -6,9 +6,9 @@
 <title>MySQL性能优化小结 | Bitqiu</title>
 <meta name=keywords content="mysql">
 <meta name=description content="MySQL性能优化小结 - Bitqiu">
-<meta name=author content="Bitqiu">
+<meta name=author content="bitqiu">
 <link rel=canonical href=https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.9f1d947375927e9847272b1f4e9be81336f539e513bf04d52cade31f81cad1af.css integrity="sha256-nx2Uc3WSfphHJysfTpvoEzb1OeUTvwTVLK3jH4HK0a8=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw+W8mWdq36u97PLc=" rel="preload stylesheet" as=style>
 <script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://blog.bitqiu.cc/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://blog.bitqiu.cc/favicon-16x16.png>
@@ -18,7 +18,10 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.88.1">
-<meta property="og:title" content="MySQL性能优化小结">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="MySQL性能优化小结">
 <meta property="og:description" content>
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/"><meta property="og:image" content="https://blog.bitqiu.cc/blog-cover.png"><meta property="article:section" content="posts">
@@ -29,14 +32,10 @@
 <meta name=twitter:title content="MySQL性能优化小结">
 <meta name=twitter:description content>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.bitqiu.cc/posts/"},{"@type":"ListItem","position":2,"name":"MySQL性能优化小结","item":"https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"MySQL性能优化小结","name":"MySQL性能优化小结","description":"","keywords":["mysql"],"articleBody":"一.数据库设计和查询优化  Schema设计时主要考虑:标准化,数据类型,索引.  一个数据库设计可以混合使用,一部分表格标准化,一部分表格非标准化.(非标准化表格适当冗余) 最优的数据类型,使表在磁盘上占据的空间尽可能小,读写快,占用内存少.(索引也尽量建立在较小的列上) 正确索引,提高Select,Update,Delete性能.   不同的Sql不同的优化方案  Explain Sql查看结果,分析查询. 查询使用匹配的类型. 使用long-slow-queries记录较慢查询,分析优化.    二.服务器端优化  安装适当的MySql版本. 如果服务器使用Intel处理器,使用Intel C++版本可提高30 %效率 配置优化. 常见优化项:   charset max_allowed_packet max_connections table_cache_size query_cache_size  三.存储引擎优化\n MyISAM  引擎特点  不支持事务,提供高速存储,检索以及全文搜索能力. 宕机会破坏表. 使用的磁盘和内存空间小. 基于表的锁,并发更新数据会出现严重性能问题. MySql只缓存索引,数据由OS缓存.   适用情况  日志系统. 只读操作或者大部分读操作. 全表扫描. 批量导入数据. 没有事务的低并发读写.   优化策略  NOT NULL,可以减少磁盘存储. Optimize Table,碎片整理,回收空闲空间. Deleting/updating/adding大量数据的时候禁止使用index. 参数优化,key_buffer_size_variable索引缓存设置. 避免并发Inset Update.     InnoDB  引擎特点  具有提交,回滚和崩溃恢复能力的事务安全存储引擎. 处理巨大数据量性能卓越,它的CPU使用效率非常高. 需要更多的内存和磁盘存储空间. 数据和索引都缓存在内存中.   适用情况  需要事务的应用. 高并发的应用. 自动恢复. 较快速的基于主键的操作.   优化策略  尽量使用short,integer的主键. 使用prefix keys,因为InnoDB没有key压缩功能. 参数优化,innodb_buffer_pool_size,innodb_data_home_dir等等.      三. 缓存优化  Memcached Redis  转自： http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/\n","wordCount":"67","inLanguage":"en","datePublished":"2014-10-01T00:00:00Z","dateModified":"2014-10-01T00:00:00Z","author":{"@type":"Person","name":"Bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"MySQL性能优化小结","name":"MySQL性能优化小结","description":"","keywords":["mysql"],"articleBody":"一.数据库设计和查询优化  Schema设计时主要考虑:标准化,数据类型,索引.  一个数据库设计可以混合使用,一部分表格标准化,一部分表格非标准化.(非标准化表格适当冗余) 最优的数据类型,使表在磁盘上占据的空间尽可能小,读写快,占用内存少.(索引也尽量建立在较小的列上) 正确索引,提高Select,Update,Delete性能.   不同的Sql不同的优化方案  Explain Sql查看结果,分析查询. 查询使用匹配的类型. 使用long-slow-queries记录较慢查询,分析优化.    二.服务器端优化  安装适当的MySql版本. 如果服务器使用Intel处理器,使用Intel C++版本可提高30 %效率 配置优化. 常见优化项:   charset max_allowed_packet max_connections table_cache_size query_cache_size  三.存储引擎优化\n MyISAM  引擎特点  不支持事务,提供高速存储,检索以及全文搜索能力. 宕机会破坏表. 使用的磁盘和内存空间小. 基于表的锁,并发更新数据会出现严重性能问题. MySql只缓存索引,数据由OS缓存.   适用情况  日志系统. 只读操作或者大部分读操作. 全表扫描. 批量导入数据. 没有事务的低并发读写.   优化策略  NOT NULL,可以减少磁盘存储. Optimize Table,碎片整理,回收空闲空间. Deleting/updating/adding大量数据的时候禁止使用index. 参数优化,key_buffer_size_variable索引缓存设置. 避免并发Inset Update.     InnoDB  引擎特点  具有提交,回滚和崩溃恢复能力的事务安全存储引擎. 处理巨大数据量性能卓越,它的CPU使用效率非常高. 需要更多的内存和磁盘存储空间. 数据和索引都缓存在内存中.   适用情况  需要事务的应用. 高并发的应用. 自动恢复. 较快速的基于主键的操作.   优化策略  尽量使用short,integer的主键. 使用prefix keys,因为InnoDB没有key压缩功能. 参数优化,innodb_buffer_pool_size,innodb_data_home_dir等等.      三. 缓存优化  Memcached Redis  转自： http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/\n","wordCount":"67","inLanguage":"en","datePublished":"2014-10-01T00:00:00Z","dateModified":"2014-10-01T00:00:00Z","author":{"@type":"Person","name":"bitqiu"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/"},"publisher":{"@type":"Organization","name":"Bitqiu","logo":{"@type":"ImageObject","url":"https://blog.bitqiu.cc/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<noscript>
-<style type=text/css>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -77,7 +76,7 @@
 <h1 class=post-title>
 MySQL性能优化小结
 </h1>
-<div class=post-meta>October 1, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/mysql-performance-optimization-summary.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta>October 1, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;bitqiu&nbsp;|&nbsp;<a href=https://github.com/bitqiu/bitqiu.github.io/tree/main/content/posts/mysql-performance-optimization-summary.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>
 <details>
