@@ -25,7 +25,7 @@ params:
   title: Bitqiu blog
   # description: "ExampleSite description"
   # keywords: [Blog, Portfolio, PaperMod]
-  author: Bitqiu
+  author: bitqiu
   
   images: ["blog-cover.png"]
 
