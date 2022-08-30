@@ -4,6 +4,8 @@ title: PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置
 date: 2015-05-18
 tags: 
   - php
+categories:
+  - php
 excerpt: PHP代码规范检查工具PHPCS、PHP代码质量检测工具PHPMD的安装与配置
 ---
 <!--more-->

@@ -3,8 +3,10 @@ layout: post
 title: 处理 Laravel 5 默认事件
 date: 2015-04-17
 tags: 
-  - php
   - laravel
+  - php
+categories:
+  - php
 excerpt: Laravel 提供了很多默认事件，登录登出、数据库连接与查询、应用启动前后、缓存等等很多默认事件，本篇以用户登录事件来演示如何处理 Larvel 5 的默认事件。
 ---
 <!--more-->

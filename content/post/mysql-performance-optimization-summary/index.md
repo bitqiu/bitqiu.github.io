@@ -4,6 +4,8 @@ title: MySQL性能优化小结
 date: 2014-10-01
 tags: 
   - mysql
+categories:
+  - database
 excerpt: 数据库设计和查询优化、服务器端优化以及存储引擎的选择，缓存优化技巧。
 ---
 

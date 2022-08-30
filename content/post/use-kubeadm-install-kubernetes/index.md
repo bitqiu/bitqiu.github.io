@@ -3,7 +3,8 @@ title: 使用 kubeadm 安装 kubernetes
 date: 2021-03-16 11:18:20
 tags:
    - kubernetes
-   - ops
+categories:
+  - ops
 description: 
 ---
 <!--more-->

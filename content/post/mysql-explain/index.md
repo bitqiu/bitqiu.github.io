@@ -4,6 +4,8 @@ title: MySQL中EXPLAIN命令详解
 date: 2014-10-12
 tags: 
   - mysql
+categories:
+  - database
 description: EXPLAIN显示了MySQL如何使用索引来处理SELECT语句以及连接表。可以帮助选择更好的索引和写出更优化的查询语句。
 ---
 <!--more-->

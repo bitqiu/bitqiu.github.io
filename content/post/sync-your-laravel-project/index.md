@@ -5,6 +5,8 @@ date: 2015-06-09
 tags: 
   - php
   - laravel
+categories:
+  - php
 excerpt: 同步你的项目结构，保持与官方新版一致，而不是每次一升级就下载覆盖。
 ---
 

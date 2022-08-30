@@ -4,6 +4,8 @@ date: 2015-05-08
 tags: 
   - linux
   - ops
+categories:
+  - ops
 description: 在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法
 ---
 <!--more-->

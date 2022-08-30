@@ -6,6 +6,8 @@ tags:
     - kong
     - nginx
     - lua
+categories:
+  - gateway
 ---
 <!--more-->
 ## 配置服务

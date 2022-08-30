@@ -3,8 +3,10 @@ layout: post
 title: Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案
 date: 2014-12-15
 tags: 
-  - php
   - laravel
+  - php
+categories:
+  - php
 excerpt: jenssegers/laravel-mongodb与MySQL关联查询时字段类型不一致导致查询不到结果的问题解决。
 ---
 <!--more-->

@@ -4,6 +4,8 @@ title: PHP的弱类型实现
 date: 2014-10-12
 tags: 
   - php
+categories:
+  - php
 excerpt: PHP中的弱类型变量的实现原理。
 ---
 <!--more-->

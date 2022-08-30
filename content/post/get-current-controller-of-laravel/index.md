@@ -2,8 +2,10 @@
 title: Laravel 获取当前控制器名称或方法
 date: 2015-03-19
 tags: 
-  - php
   - laravel
+  - php
+categories:
+  - php
 description: 在 Laravel 项目中获取当前被调用的控制器名称和方法
 ---
 <!--more-->

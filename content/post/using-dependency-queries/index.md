@@ -4,6 +4,8 @@ title: laravel 使用依赖关系查询
 date: 2015-09-05
 tags: 
     - php
+categories:
+  - php
 description: 有没有发现有时候你会有依赖关系查询的需求，比如：*评论大于5的所有文章*，那么评论是文章的关系，所以这种我们称为依赖关系查询
 ---
 <!--more-->
