@@ -1,0 +1,104 @@
+<!doctype html><html lang dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><title>Kong + JWT</title><link rel=canonical href=https://blog.bitqiu.cc/p/kong--jwt/><link rel=stylesheet href=/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css><meta property="og:title" content="Kong + JWT"><meta property="og:description" content><meta property="og:url" content="https://blog.bitqiu.cc/p/kong--jwt/"><meta property="og:site_name" content="Bitqiu Blog"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="gateway"><meta property="article:tag" content="kong"><meta property="article:tag" content="nginx"><meta property="article:tag" content="lua"><meta property="article:published_time" content="2020-03-23T11:02:02+00:00"><meta property="article:modified_time" content="2020-03-23T11:02:02+00:00"><meta name=twitter:title content="Kong + JWT"><meta name=twitter:description content></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src="https://avatars.githubusercontent.com/u/4955106?v=4" width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>🤖️</span></figure><div class=site-meta><h1 class=site-name><a href=/>Bitqiu Blog</a></h1><h2 class=site-description>Keep calm and coding.</h2></div></header><ol class=social-menu><li><a href=https://github.com/bitqiu target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>Dark Mode</span></li></div></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/kong--jwt/>Kong + JWT</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Mar 23, 2020</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>1 minute read</time></div></footer></div></header><section class=article-content><h2 id=配置服务>配置服务</h2><p>添加 Service</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X POST <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --url http://localhost:8001/services/ <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --data <span class=s1>&#39;name=api-gateway-sv&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --data <span class=s1>&#39;url=https://blog.bitqiu.cc&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p>为服务添加路由</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X POST <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --url http://localhost:8001/services/api-gateway-sv/routes <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --data <span class=s1>&#39;hosts[]=api.bitqiu.cc&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p>通过Kong转发您的请求</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X GET <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --url http://localhost:8000/ <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --header <span class=s1>&#39;Host: api.bitqiu.cc&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=配置-jwt>配置 JWT</h2><p>service 开启 jwt 插件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=c1># 查看插件列表</span>
+</span></span><span class=line><span class=cl>curl -i -X GET <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--url http://localhost:8000/
+</span></span><span class=line><span class=cl><span class=c1># 开启 jwt 插件</span>
+</span></span><span class=line><span class=cl>curl -i -X POST <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--url http://localhost:8001/services/api-gateway-sv/plugins <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--data <span class=s1>&#39;name=jwt&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p>创建 consumer</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X POST <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--url http://localhost:8000/consumers <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--data <span class=s1>&#39;username=bitqiu&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p>创建 jwt 凭证</p><blockquote><p>可以指定算法<code>algorithm</code>，<code>iss</code>签发者<code>key</code>，密钥<code>secret</code>，也可以省略，会自动生成。</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X POST <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--url http://localhost:8000/consumers/bitqiu/jwt <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--data <span class=s1>&#39;algorithm=HS256&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--data <span class=s1>&#39;key=bitqiu_key&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--data <span class=s1>&#39;secret=uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 查看 jwt 凭证</span>
+</span></span><span class=line><span class=cl>curl -i -X GET <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>	--url http://localhost:8000/consumers/bitqiu/jwt
+</span></span><span class=line><span class=cl><span class=c1># response</span>
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;rsa_public_key&#34;</span>: null,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;created_at&#34;</span>: 1553681782,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;consumer&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;id&#34;</span>: <span class=s2>&#34;2e34d380-ec48-4a0d-926f-6dd8696a7eca&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;id&#34;</span>: <span class=s2>&#34;61ee520c-3387-42f0-8e5f-02e0dc34d3d4&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;algorithm&#34;</span>: <span class=s2>&#34;HS256&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;secret&#34;</span>: <span class=s2>&#34;uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;key&#34;</span>: <span class=s2>&#34;7Xc3L8TdFpU6kgPEeR4iqMAstqLewJSS&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=jwt-下发>jwt 下发</h3><p>业务服务器根据 <code>kong</code> 生成的 <code>jwt</code> 凭证中的 <code>algorithm、key（iss）、secret</code>进行 <code>token</code> 的演算和下发。请求<code>鉴权接口</code>需携带
+<code>Authorization: Bearer jwt</code> 进行请求。测试的话可以用 <a class=link href=https://jwt.io/ target=_blank rel=noopener>https://jwt.io</a> 生成：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>curl -i -X GET <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --url http://localhost:8000/ <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --header <span class=s1>&#39;Host: api.bitqiu.cc&#39;</span>
+</span></span><span class=line><span class=cl>  --header <span class=s1>&#39;Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkb3dudG93bl9rZXkiLCJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.nDvZa6Nu9cLxO36jnXsHwYIxrNLrDomJgvKJ5gihn4k&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=https://i.loli.net/2021/03/11/COTYlxoSHP6m8yM.png loading=lazy></p></section><footer class=article-footer><section class=article-tags><a href=/tags/gateway/>gateway</a>
+<a href=/tags/kong/>kong</a>
+<a href=/tags/nginx/>nginx</a>
+<a href=/tags/lua/>lua</a></section></footer></article><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2022 Bitqiu Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.13.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#配置服务>配置服务</a></li><li><a href=#配置-jwt>配置 JWT</a><ol><li><a href=#jwt-下发>jwt 下发</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

@@ -1,142 +1,1900 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Bitqiu</title>
-    <link>https://blog.bitqiu.cc/</link>
-    <description>Recent content on Bitqiu</description>
-    <image>
-      <url>https://blog.bitqiu.cc/blog-cover.png</url>
-      <link>https://blog.bitqiu.cc/blog-cover.png</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 11:18:20 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>使用 kubeadm 安装 kubernetes</title>
-      <link>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</link>
-      <pubDate>Tue, 16 Mar 2021 11:18:20 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/use-kubeadm-install-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kong 基本用法 &#43; JWT</title>
-      <link>https://blog.bitqiu.cc/posts/kong-jwt/</link>
-      <pubDate>Mon, 23 Mar 2020 11:02:02 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/kong-jwt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>使用依赖关系查询</title>
-      <link>https://blog.bitqiu.cc/posts/using-dependency-queries/</link>
-      <pubDate>Sat, 05 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/using-dependency-queries/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>让你的 Laravel 应用与官方保持同步</title>
-      <link>https://blog.bitqiu.cc/posts/sync-your-laravel-project/</link>
-      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/sync-your-laravel-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置</title>
-      <link>https://blog.bitqiu.cc/posts/install-phpcs-and-phpmd/</link>
-      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/install-phpcs-and-phpmd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sudo -Hu 执行时找不到命令的问题解决</title>
-      <link>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</link>
-      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</guid>
-      <description>在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法</description>
-    </item>
-    
-    <item>
-      <title>处理 Laravel 5 默认事件</title>
-      <link>https://blog.bitqiu.cc/posts/laravel-login-event-handler/</link>
-      <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/laravel-login-event-handler/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Laravel 获取当前控制器名称或方法</title>
-      <link>https://blog.bitqiu.cc/posts/get-current-controller-of-laravel/</link>
-      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/get-current-controller-of-laravel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案</title>
-      <link>https://blog.bitqiu.cc/posts/laravel-mongodb-field-type-bug/</link>
-      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/laravel-mongodb-field-type-bug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MySQL中EXPLAIN命令详解</title>
-      <link>https://blog.bitqiu.cc/posts/mysql-explain/</link>
-      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/mysql-explain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PHP的弱类型实现</title>
-      <link>https://blog.bitqiu.cc/posts/php-variable-principle/</link>
-      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/php-variable-principle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PHP汉字转拼音更准确的解决方案</title>
-      <link>https://blog.bitqiu.cc/posts/php-chinese-to-pinyin/</link>
-      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/php-chinese-to-pinyin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub windows客户端报https错误解决办法</title>
-      <link>https://blog.bitqiu.cc/posts/github-windows-https-error/</link>
-      <pubDate>Sat, 04 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/github-windows-https-error/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MySQL性能优化小结</title>
-      <link>https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/</link>
-      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/mysql-performance-optimization-summary/</guid>
-      <description></description>
-    </item>
-    
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitqiu Blog</title><link>https://blog.bitqiu.cc/</link><description>Recent content on Bitqiu Blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 16 Mar 2021 11:18:20 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 kubeadm 安装 kubernetes</title><link>https://blog.bitqiu.cc/p/%E4%BD%BF%E7%94%A8-kubeadm-%E5%AE%89%E8%A3%85-kubernetes/</link><pubDate>Tue, 16 Mar 2021 11:18:20 +0000</pubDate><guid>https://blog.bitqiu.cc/p/%E4%BD%BF%E7%94%A8-kubeadm-%E5%AE%89%E8%A3%85-kubernetes/</guid><description>&lt;h2 id="配置要求">配置要求&lt;/h2>
+&lt;ul>
+&lt;li>2核4G 的服务器&lt;/li>
+&lt;li>Cent OS 7.8&lt;/li>
+&lt;/ul>
+&lt;h2 id="修改-hostname">修改 hostname&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 修改 hostname&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hostnamectl set-hostname kubernetes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看修改结果&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hostnamectl status
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 设置 hostname 解析&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;127.0.0.1 &lt;/span>&lt;span class="k">$(&lt;/span>hostname&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 此处 hostname 的输出将会是该机器在 Kubernetes 集群中的节点名字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 不能使用 localhost 作为节点的名字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/redhat-release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="检查网络">检查网络&lt;/h2>
+&lt;p>在所有节点执行命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@k8s-master ~&lt;span class="o">]&lt;/span>&lt;span class="c1"># ip route show&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">default via 10.1.2.2 dev ens33 proto static metric &lt;span class="m">100&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">10.1.2.0/24 dev ens33 proto kernel scope link src 10.1.2.100 metric &lt;span class="m">100&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@k8s-master ~&lt;span class="o">]&lt;/span>&lt;span class="c1"># ip address&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu &lt;span class="m">65536&lt;/span> qdisc noqueue state UNKNOWN group default qlen &lt;span class="m">1000&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet 127.0.0.1/8 scope host lo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> valid_lft forever preferred_lft forever
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet6 ::1/128 scope host
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> valid_lft forever preferred_lft forever
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2: ens33: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu &lt;span class="m">1500&lt;/span> qdisc pfifo_fast state UP group default qlen &lt;span class="m">1000&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> link/ether 00:0c:29:2e:35:42 brd ff:ff:ff:ff:ff:ff
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet 10.1.2.100/24 brd 10.1.2.255 scope global noprefixroute ens33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> valid_lft forever preferred_lft forever
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet6 fe80::a3e8:7936:50da:d341/64 scope link noprefixroute
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> valid_lft forever preferred_lft forever
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>kubelet使用的IP地址&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>ip route show&lt;/code> 命令中，可以知道机器的默认网卡，通常是 &lt;code>eth0&lt;/code>，如 &lt;em>&lt;strong>default via 10.1.2.2 dev eth0&lt;/strong>&lt;/em>&lt;/li>
+&lt;li>&lt;code>ip address&lt;/code> 命令中，可显示默认网卡的 IP 地址，Kubernetes 将使用此 IP 地址与集群内的其他节点通信，如 &lt;code>10.1.2.100&lt;/code>&lt;/li>
+&lt;li>所有节点上 Kubernetes 所使用的 IP 地址必须可以互通（无需 NAT 映射、无安全组或防火墙隔离）&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="安装-containerd--kubelet--kubeadm--kubectl">安装 containerd / kubelet / kubeadm / kubectl&lt;/h2>
+&lt;p>使用 root 身份在所有节点执行如下代码，以安装软件：&lt;/p>
+&lt;ul>
+&lt;li>containerd&lt;/li>
+&lt;li>nfs-utils&lt;/li>
+&lt;li>kubectl / kubeadm / kubelet&lt;/li>
+&lt;/ul>
+&lt;p>手动执行以下代码，结果与快速安装相同。&lt;em>&lt;strong>请将脚本第79行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.17.4&lt;/strong>&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;p>docker hub 镜像请根据自己网络的情况任选一个&lt;/p>
+&lt;ul>
+&lt;li>第四行为腾讯云 docker hub 镜像&lt;/li>
+&lt;li>第六行为DaoCloud docker hub 镜像&lt;/li>
+&lt;li>第八行为阿里云 docker hub 镜像&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 在 master 节点和 worker 节点都要执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 最后一个参数 1.20.1 用于指定 kubenetes 版本，支持所有 1.20.x 版本的安装&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 腾讯云 docker hub 镜像&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># export REGISTRY_MIRROR=&amp;#34;https://mirror.ccs.tencentyun.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># DaoCloud 镜像&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># export REGISTRY_MIRROR=&amp;#34;http://f1361db2.m.daocloud.io&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 阿里云 docker hub 镜像&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">REGISTRY_MIRROR&lt;/span>&lt;span class="o">=&lt;/span>https://registry.cn-hangzhou.aliyuncs.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>在 master 节点和 worker 节点都要执行&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;span class="lnt">82
+&lt;/span>&lt;span class="lnt">83
+&lt;/span>&lt;span class="lnt">84
+&lt;/span>&lt;span class="lnt">85
+&lt;/span>&lt;span class="lnt">86
+&lt;/span>&lt;span class="lnt">87
+&lt;/span>&lt;span class="lnt">88
+&lt;/span>&lt;span class="lnt">89
+&lt;/span>&lt;span class="lnt">90
+&lt;/span>&lt;span class="lnt">91
+&lt;/span>&lt;span class="lnt">92
+&lt;/span>&lt;span class="lnt">93
+&lt;/span>&lt;span class="lnt">94
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 在 master 节点和 worker 节点都要执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 containerd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 参考文档如下&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/modules-load.d/containerd.conf
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">overlay
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">br_netfilter
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe overlay
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe br_netfilter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Setup required sysctl params, these persist across reboots.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.bridge.bridge-nf-call-iptables = 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.ipv4.ip_forward = 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">net.bridge.bridge-nf-call-ip6tables = 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Apply sysctl params without reboot&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sysctl --system
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 卸载旧版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum remove -y containerd.io
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 设置 yum repository&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y yum-utils device-mapper-persistent-data lvm2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 containerd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y containerd.io-1.4.3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p /etc/containerd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">containerd config default &amp;gt; /etc/containerd/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s2">&amp;#34;s#k8s.gcr.io#registry.aliyuncs.com/k8sxio#g&amp;#34;&lt;/span> /etc/containerd/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;/containerd.runtimes.runc.options/a\ \ \ \ \ \ \ \ \ \ \ \ SystemdCgroup = true&amp;#39;&lt;/span> /etc/containerd/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s2">&amp;#34;s#https://registry-1.docker.io#&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">REGISTRY_MIRROR&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">#g&amp;#34;&lt;/span> /etc/containerd/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl daemon-reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> containerd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart containerd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 nfs-utils&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 必须先安装 nfs-utils 才能挂载 nfs 网络存储&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y nfs-utils
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y wget
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 关闭 防火墙&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl stop firewalld
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl disable firewalld
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 关闭 SeLinux&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setenforce &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s2">&amp;#34;s/SELINUX=enforcing/SELINUX=disabled/g&amp;#34;&lt;/span> /etc/selinux/config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 关闭 swap&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">swapoff -a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yes &lt;span class="p">|&lt;/span> cp /etc/fstab /etc/fstab_bak
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/fstab_bak &lt;span class="p">|&lt;/span>grep -v swap &amp;gt; /etc/fstab
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 配置K8S的yum源&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">[kubernetes]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">name=Kubernetes
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">enabled=1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">gpgcheck=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo_gpgcheck=0
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 卸载旧版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum remove -y kubelet kubeadm kubectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装kubelet、kubeadm、kubectl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 将 ${1} 替换为 kubernetes 版本号，例如 1.20.1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum install -y kubelet-&lt;span class="si">${&lt;/span>&lt;span class="nv">1&lt;/span>&lt;span class="si">}&lt;/span> kubeadm-&lt;span class="si">${&lt;/span>&lt;span class="nv">1&lt;/span>&lt;span class="si">}&lt;/span> kubectl-&lt;span class="si">${&lt;/span>&lt;span class="nv">1&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crictl config runtime-endpoint /run/containerd/containerd.sock
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 重启 docker，并启动 kubelet&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl daemon-reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> kubelet &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> systemctl start kubelet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">containerd --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubelet --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="初始化-master-节点">初始化 master 节点&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 只在 master 节点执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 替换 x.x.x.x 为 master 节点的内网IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># export 命令只在当前 shell 会话中有效，开启新的 shell 窗口后，如果要继续安装过程，请重新执行此处的 export 命令&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MASTER_IP&lt;/span>&lt;span class="o">=&lt;/span>x.x.x.x
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 替换 apiserver.demo 为 您想要的 dnsName&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">APISERVER_NAME&lt;/span>&lt;span class="o">=&lt;/span>apiserver.demo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Kubernetes 容器组所在的网段，该网段安装完成后，由 kubernetes 创建，事先并不存在于您的物理网络中&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">POD_SUBNET&lt;/span>&lt;span class="o">=&lt;/span>10.100.0.1/16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">MASTER_IP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2"> &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">APISERVER_NAME&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 只在 master 节点执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 脚本出错时终止执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="si">${#&lt;/span>&lt;span class="nv">POD_SUBNET&lt;/span>&lt;span class="si">}&lt;/span> -eq &lt;span class="m">0&lt;/span> &lt;span class="o">]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="si">${#&lt;/span>&lt;span class="nv">APISERVER_NAME&lt;/span>&lt;span class="si">}&lt;/span> -eq &lt;span class="m">0&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\033[31;1m请确保您已经设置了环境变量 POD_SUBNET 和 APISERVER_NAME \033[0m&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">当前POD_SUBNET&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$POD_SUBNET&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">当前APISERVER_NAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$APISERVER_NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看完整配置选项 https://godoc.org/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -f ./kubeadm-config.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt;EOF &amp;gt; ./kubeadm-config.yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">---
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">apiVersion: kubeadm.k8s.io/v1beta2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">kind: ClusterConfiguration
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">kubernetesVersion: v${1}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">imageRepository: registry.aliyuncs.com/k8sxio
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">controlPlaneEndpoint: &amp;#34;${APISERVER_NAME}:6443&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">networking:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> serviceSubnet: &amp;#34;10.96.0.0/16&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> podSubnet: &amp;#34;${POD_SUBNET}&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> dnsDomain: &amp;#34;cluster.local&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">---
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">apiVersion: kubelet.config.k8s.io/v1beta1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">kind: KubeletConfiguration
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">cgroupDriver: systemd
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># kubeadm init&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 根据您服务器网速的情况，您需要等候 3 - 10 分钟&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;抓取镜像，请稍候...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm config images pull --config&lt;span class="o">=&lt;/span>kubeadm-config.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;初始化 Master 节点&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm init --config&lt;span class="o">=&lt;/span>kubeadm-config.yaml --upload-certs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 配置 kubectl&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -rf /root/.kube/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir /root/.kube/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp -i /etc/kubernetes/admin.conf /root/.kube/config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装 calico 网络插件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 参考文档 https://docs.projectcalico.org/v3.13/getting-started/kubernetes/self-managed-onprem/onpremises&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;安装calico-3.17.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm -f calico-3.17.1.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl create -f https://kuboard.cn/install-script/v1.20.x/calico-operator.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://kuboard.cn/install-script/v1.20.x/calico-custom-resources.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s2">&amp;#34;s#192.168.0.0/16#&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">POD_SUBNET&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">#&amp;#34;&lt;/span> calico-custom-resources.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl create -f calico-custom-resources.yaml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>检查 master 初始化结果&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 只在 master 节点执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 执行如下命令，等待 3-10 分钟，直到所有的容器组处于 Running 状态&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">watch kubectl get pod -n kube-system -o wide
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看 master 节点初始化结果&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubectl get nodes -o wide
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="初始化-worker节点">初始化 worker节点&lt;/h2>
+&lt;h3 id="获得-join命令参数">获得 join命令参数&lt;/h3>
+&lt;p>&lt;strong>在 master 节点上执行&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">kubeadm token create --print-join-command
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可获取kubeadm join 命令及参数，如下所示&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># kubeadm token create 命令的输出&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm join apiserver.demo:6443 --token mpfjma.4vjjg8flqihor4vt --discovery-token-ca-cert-hash sha256:6f7a8e40a810323672de5eee6f4d19aa2dbdb38411845a1bf5dd63485c43d303
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="初始化worker">初始化worker&lt;/h3>
+&lt;p>&lt;strong>针对所有的 worker 节点执行&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 只在 worker 节点执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 替换 x.x.x.x 为 master 节点的内网 IP&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MASTER_IP&lt;/span>&lt;span class="o">=&lt;/span>x.x.x.x
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 替换 apiserver.demo 为初始化 master 节点时所使用的 APISERVER_NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">APISERVER_NAME&lt;/span>&lt;span class="o">=&lt;/span>apiserver.demo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">MASTER_IP&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2"> &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">APISERVER_NAME&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 替换为 master 节点上 kubeadm token create 命令的输出&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kubeadm join apiserver.demo:6443 --token mpfjma.4vjjg8flqihor4vt --discovery-token-ca-cert-hash sha256:6f7a8e40a810323672de5eee6f4d19aa2dbdb38411845a1bf5dd63485c43d303
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="检查初始化结果">检查初始化结果&lt;/h3>
+&lt;p>在 master 节点上执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">kubectl get nodes -o wide
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出结果如下所示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@k8s-master ~&lt;span class="o">]&lt;/span>&lt;span class="c1"># kubectl get nodes&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NAME STATUS ROLES AGE VERSION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">k8s-master Ready master 3m46s v1.17.4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">k8s-node Ready &amp;lt;none&amp;gt; 2m20s v1.17.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Kong + JWT</title><link>https://blog.bitqiu.cc/p/kong--jwt/</link><pubDate>Mon, 23 Mar 2020 11:02:02 +0000</pubDate><guid>https://blog.bitqiu.cc/p/kong--jwt/</guid><description>&lt;h2 id="配置服务">配置服务&lt;/h2>
+&lt;p>添加 Service&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X POST &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8001/services/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;name=api-gateway-sv&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;url=https://blog.bitqiu.cc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>为服务添加路由&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X POST &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8001/services/api-gateway-sv/routes &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;hosts[]=api.bitqiu.cc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>通过Kong转发您的请求&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X GET &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --header &lt;span class="s1">&amp;#39;Host: api.bitqiu.cc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="配置-jwt">配置 JWT&lt;/h2>
+&lt;p>service 开启 jwt 插件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看插件列表&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -i -X GET &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 开启 jwt 插件&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -i -X POST &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8001/services/api-gateway-sv/plugins &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;name=jwt&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>创建 consumer&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X POST &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/consumers &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;username=bitqiu&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>创建 jwt 凭证&lt;/p>
+&lt;blockquote>
+&lt;p>可以指定算法&lt;code>algorithm&lt;/code>，&lt;code>iss&lt;/code>签发者&lt;code>key&lt;/code>，密钥&lt;code>secret&lt;/code>，也可以省略，会自动生成。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X POST &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/consumers/bitqiu/jwt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;algorithm=HS256&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;key=bitqiu_key&amp;#39;&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --data &lt;span class="s1">&amp;#39;secret=uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看 jwt 凭证&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -i -X GET &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/consumers/bitqiu/jwt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># response&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;rsa_public_key&amp;#34;&lt;/span>: null,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;created_at&amp;#34;&lt;/span>: 1553681782,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;consumer&amp;#34;&lt;/span>: &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;id&amp;#34;&lt;/span>: &lt;span class="s2">&amp;#34;2e34d380-ec48-4a0d-926f-6dd8696a7eca&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;id&amp;#34;&lt;/span>: &lt;span class="s2">&amp;#34;61ee520c-3387-42f0-8e5f-02e0dc34d3d4&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;algorithm&amp;#34;&lt;/span>: &lt;span class="s2">&amp;#34;HS256&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;secret&amp;#34;&lt;/span>: &lt;span class="s2">&amp;#34;uFLMFeKPPL525ppKrqmUiT2rlvkpLc9u&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;key&amp;#34;&lt;/span>: &lt;span class="s2">&amp;#34;7Xc3L8TdFpU6kgPEeR4iqMAstqLewJSS&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="jwt-下发">jwt 下发&lt;/h3>
+&lt;p>业务服务器根据 &lt;code>kong&lt;/code> 生成的 &lt;code>jwt&lt;/code> 凭证中的 &lt;code>algorithm、key（iss）、secret&lt;/code>进行 &lt;code>token&lt;/code> 的演算和下发。请求&lt;code>鉴权接口&lt;/code>需携带
+&lt;code> Authorization: Bearer jwt&lt;/code> 进行请求。测试的话可以用 &lt;a class="link" href="https://jwt.io/" target="_blank" rel="noopener"
+>https://jwt.io&lt;/a> 生成：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">curl -i -X GET &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --url http://localhost:8000/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --header &lt;span class="s1">&amp;#39;Host: api.bitqiu.cc&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --header &lt;span class="s1">&amp;#39;Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkb3dudG93bl9rZXkiLCJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.nDvZa6Nu9cLxO36jnXsHwYIxrNLrDomJgvKJ5gihn4k&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://i.loli.net/2021/03/11/COTYlxoSHP6m8yM.png"
+loading="lazy"
+>&lt;/p></description></item><item><title>Archives</title><link>https://blog.bitqiu.cc/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/archives/</guid><description/></item><item><title>About</title><link>https://blog.bitqiu.cc/about/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/about/</guid><description>&lt;h1 id="hello-there-">Hello there 👋&lt;/h1>
+&lt;p>&lt;img src="https://blog.bitqiu.cc/about/header_1.png"
+width="2000"
+height="400"
+srcset="https://blog.bitqiu.cc/about/header_1_huc07ab8bfa6ec25bf58dcd2517880a779_803023_480x0_resize_box_3.png 480w, https://blog.bitqiu.cc/about/header_1_huc07ab8bfa6ec25bf58dcd2517880a779_803023_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="500"
+data-flex-basis="1200px"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>Keep calm and coding.&lt;/p>
+&lt;/blockquote>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>laravel 使用依赖关系查询</title><link>https://blog.bitqiu.cc/p/laravel-%E4%BD%BF%E7%94%A8%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%9F%A5%E8%AF%A2/</link><pubDate>Sat, 05 Sep 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/laravel-%E4%BD%BF%E7%94%A8%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%9F%A5%E8%AF%A2/</guid><description>&lt;p>有没有发现有时候你会有依赖关系查询的需求，比如：&lt;em>评论大于5的所有文章&lt;/em>，那么评论是文章的关系，所以这种我们称为依赖关系查询，
+下面举例一个：&lt;/p>
+&lt;h3 id="查出所有包含了laravel这个标签的所有文章">查出所有包含了[laravel]这个标签的所有文章&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Post model
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">class&lt;/span> &lt;span class="nc">Post&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">Eloquent&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">tags&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">belongsToMany&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Tag&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Tag model
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">class&lt;/span> &lt;span class="nc">Tag&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">Eloquent&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">posts&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">belongsToMany&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Post&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 查询自上周发布以来包含了 `laravel` 标签的所有文章
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$posts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Post&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">whereHas&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;tags&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$query&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$query&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">where&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;name&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;=&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;laravel&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">where&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;published_at&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39; &amp;gt;= &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Carbon\Carbon&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">now&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">subWeek&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">get&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>让你的 Laravel 应用与官方保持同步</title><link>https://blog.bitqiu.cc/p/%E8%AE%A9%E4%BD%A0%E7%9A%84-laravel-%E5%BA%94%E7%94%A8%E4%B8%8E%E5%AE%98%E6%96%B9%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5/</link><pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/%E8%AE%A9%E4%BD%A0%E7%9A%84-laravel-%E5%BA%94%E7%94%A8%E4%B8%8E%E5%AE%98%E6%96%B9%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5/</guid><description>&lt;h2 id="解决什么问题">解决什么问题？&lt;/h2>
+&lt;p>我们在用着 4.2，过了一段时间作者发布了 5.0，项目可能还没开发完，然后你又像我一样是一个不升级不舒服斯基，那么用升到最新版是你接下来要忙碌的事情。因为你不知道 4.2 ~ 5.0 变化了多少。所以你不可能手动一个个加上或者删除、修改。有的人可能是备份，然后用新版建立一个项目：&lt;code>composer create-project laravel/laravel&lt;/code> ，然后把原来自己的代码考过来，然而，变化不一定只是文件新增或者删除啊，可能是原来文件里改了一行，你却没法知道。所以这就头疼了。那么下面我就分享一个超简单的办法来解决这个问题：&lt;/p>
+&lt;p>首先我们使用的是 &lt;code>git&lt;/code>，如果你不熟悉它的话，起码你这时候应该去补补基本命令了。&lt;/p>
+&lt;p>这里假设我们的项目叫做 &lt;code>blog&lt;/code>, 然后我们第一步要做的事情是添加官方&lt;code>git&lt;/code>源:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> blog &lt;span class="c1"># 切到项目根目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add laravel https://github.com/laravel/laravel &lt;span class="c1"># 添加一个源&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里解释一下：&lt;/p>
+&lt;p>因为我们的项目基本都已经有一个源&lt;code>origin&lt;/code>，就是我们项目用于上传到公司 &lt;code>gitlab&lt;/code> 或者 &lt;code>bitbucket&lt;/code> 这样的网站用于项目代码管理的地方，所以我们不能破坏它。然后我们添加了一个叫做 &lt;code>laravel&lt;/code>，这样就会有两个源了，意味着我们就可以从两个源同步代码。&lt;/p>
+&lt;h2 id="拉取-larvel-的新版代码">拉取 Larvel 的新版代码&lt;/h2>
+&lt;h4 id="拉取指定的-laravel-分支">拉取指定的 Laravel 分支&lt;/h4>
+&lt;blockquote>
+&lt;p>注意：在我们拉取 Laravel 源的代码前，请确认你的修改都已经保存并 &lt;code>commit&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git pull laravel master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里我们从 &lt;code>laravel&lt;/code> 的源拉取 &lt;code>master&lt;/code> 分支，当然你也可以拉取其它分支的代码。&lt;/p>
+&lt;h4 id="合并冲突">合并冲突&lt;/h4>
+&lt;p>拉取完代码，这时候通常是会冲突的，因为你的代码与官方的代码不一样了，冲突部分就是不相同的地方，那么你根据合并结果找到&lt;code>CONFLICT (content): Merge conflict in xxxx.xxx&lt;/code> 部分的文件打开，找到冲突的地方合并就好了。&lt;/p>
+&lt;p>解决完冲突你的代码结构就与官方一致了，而且这种合并方式不会让你落下任何一个不同的地方。&lt;/p>
+&lt;p>当然以上的方法适用于任何 &lt;code>git&lt;/code> 管理的项目。比如工作中，你 &lt;code>fork&lt;/code> 了主项目，要经常同步主项目的更新时就用这个方法最简单了。&lt;/p></description></item><item><title>PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置</title><link>https://blog.bitqiu.cc/p/php%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B8%8E%E8%B4%A8%E9%87%8F%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7phpcsphpmd%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link><pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/php%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B8%8E%E8%B4%A8%E9%87%8F%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7phpcsphpmd%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid><description>&lt;h2 id="phpcs">PHPCS&lt;/h2>
+&lt;h3 id="安装">安装&lt;/h3>
+&lt;p>有以下方式安装 PHPCS:&lt;/p>
+&lt;h5 id="使用-composer">使用 &lt;code>composer&lt;/code>:&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">composer global require &amp;#34;squizlabs/php_codesniffer=*&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>注意，你可能需要将 &lt;code>~/.composer/vendor/bin/&lt;/code> 添加到 PATH 环境变量中，否则会报命令找不到。&lt;/p>
+&lt;/blockquote>
+&lt;h5 id="使用-pear">使用 PEAR:&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pear install PHP_CodeSniffer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="下载安装">下载安装：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">php phpcs.phar -h
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">php phpcbf.phar -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后移动到命令目录：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">mv phpcs.phar /usr/bin/phpcs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv phpcbf.phar /usr/bin/phpcbf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 也许上面需要 sudo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/bin/phpcs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/bin/phpcbf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里的 &lt;code>phpcbf&lt;/code> 是代码修复工具。&lt;/p>
+&lt;h3 id="使用">使用&lt;/h3>
+&lt;h5 id="查看帮助">查看帮助：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs --help
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="添加标准">添加标准：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs --config-set installed_paths PATH_TO_SEARCH_STANDARDS
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意：假设标准为 &lt;code>Weibo&lt;/code>, 目录为:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/Users/overtrue/code_standards/Weibo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中&lt;code>Weibo&lt;/code> 里才是 &lt;code>ruleset.xml&lt;/code>，那么对应上面的 &lt;code>PATH_TO_SEARCH_STANDARDS&lt;/code> 应该为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs --config-set installed_paths /Users/overtrue/code_standards
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="查看已经安装的标准">查看已经安装的标准：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs -i
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="查看配置">查看配置：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs --config-show
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="检查代码规范">检查代码规范：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs ./codes/Example.php
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// or
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpcs ./codes/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>指定标准：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs ./codes/Example.php --standard=PSR2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>报告格式：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs --report=summary /path/to/code
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可用的格式有（默认为: &lt;code>full&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">full, xml, checkstyle, csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">json, emacs, source, summary, diff
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">svnblame, gitblame, hgblame or notifysend
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="修复代码">修复代码&lt;/h5>
+&lt;p>第一种：使用 diff 形式打补丁：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">phpcs --report-diff&lt;span class="o">=&lt;/span>/path/to/changes.diff /path/to/code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">patch -p0 -ui /path/to/changes.diff
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># patching file /path/to/code/file.php&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>第二种：使用 PHP Code Beautifier 和 Fixer：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcbf /path/to/code
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以上命令会自动修复原文件，如果不想直接覆盖原文件，可以使用 &lt;code>--suffix&lt;/code> 指定修复后的代码后缀：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">phpcs /path/to/code --suffix=.fixed
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>更多 PHPCS 的使用请参考：https://github.com/squizlabs/PHP_CodeSniffer/wiki&lt;/p>
+&lt;h2 id="phpmd">PHPMD&lt;/h2>
+&lt;h3 id="安装-1">安装&lt;/h3>
+&lt;p>同样有以下安装方式：&lt;/p>
+&lt;h5 id="下载-phar-文件安装">下载 &lt;code>phar&lt;/code> 文件安装：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">wget -c http://static.phpmd.org/php/latest/phpmd.phar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv phpmd.phar /usr/bin/phpmd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/bin/phpmd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="使用-composer-安装">使用 &lt;code>Composer&lt;/code> 安装：&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">composer global require phpmd/phpmd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="使用-1">使用&lt;/h3>
+&lt;ul>
+&lt;li>检查代码质量：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># phpmd 代码路径 报告格式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpmd /path/to/source text
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者指定要检查的规则：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># phpmd 代码路径 报告格式 规则列表
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpmd /path/to/source text codesize,unusedcode,naming
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者使用xml指定检查规则：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># phpmd 代码路径 报告格式 规则xml文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">phpmd /path/to/source text /phpmd_ruleset.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>报告格式有：
+&lt;ul>
+&lt;li>xml, 以 XML 格式输出；&lt;/li>
+&lt;li>text, 简单的文本格式；&lt;/li>
+&lt;li>html, 输出到单个的html；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>这里有一个phpmd规则可参考：https://github.com/overtrue/phpmd-rulesets&lt;/p>
+&lt;p>更多关于 PHPMD 的使用请参考：http://phpmd.org/documentation/index.html&lt;/p></description></item><item><title>sudo -Hu 执行时找不到命令的问题解决</title><link>https://blog.bitqiu.cc/p/sudo-hu-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link><pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/sudo-hu-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid><description>&lt;p>虽然在 &lt;code>/etc/profile&lt;/code> 中加了全局 &lt;code>PATH&lt;/code>，但是在以 &lt;code>sudo -Hu [username] [command]&lt;/code> 执行的时候报命令不存在，原因是 &lt;code>/etc/sudoers&lt;/code> 中还有一个 &lt;code>secure_path&lt;/code> 没修改：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">visudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查找 &lt;code>secure_path&lt;/code>，加入你要添加的目录，比如 &lt;code>/usr/local/bin&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Defaults &lt;span class="nv">secure_path&lt;/span> &lt;span class="o">=&lt;/span> /sbin:/bin:/usr/sbin:/usr/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>改为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Defaults &lt;span class="nv">secure_path&lt;/span> &lt;span class="o">=&lt;/span> /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>即可。&lt;/p></description></item><item><title>处理 Laravel 5 默认事件</title><link>https://blog.bitqiu.cc/p/%E5%A4%84%E7%90%86-laravel-5-%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6/</link><pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/%E5%A4%84%E7%90%86-laravel-5-%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6/</guid><description>&lt;p>Laravel 提供了很多默认事件，登录登出、数据库连接与查询、应用启动前后、缓存等等很多默认事件，本篇以用户登录事件来演示如何处理 Larvel 5 的默认事件。
+我们的目的：&lt;strong>处理用户登录事件，在用户登录的时候给用户添加最后登录时间(&lt;code>last_login_at&lt;/code>)，以及最后登录的IP(&lt;code>last_ip&lt;/code>)&lt;/strong>&lt;/p>
+&lt;p>用户的登录事件在 Laravel 5 里的事件名称是 &lt;code>auth.login&lt;/code>。&lt;/p>
+&lt;h3 id="第一步创建事件处理器">第一步：创建事件处理器&lt;/h3>
+&lt;p>Laravel 5 里直接使用命令即可创建一个事件处理器:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">php&lt;/span> &lt;span class="nx">artisan&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="nx">event&lt;/span> &lt;span class="nx">AuthLoginEventHandler&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>AuthLoginEventHandler&lt;/code> 是我们定义的名称，你可以随意命名(合理的)，它会创建 &lt;code>app/Handlers/Events/AuthLoginEventHandler.php&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Handlers\Events&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Contracts\Queue\ShouldBeQueued&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Queue\InteractsWithQueue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">AuthLoginEventHandler&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Create the event handler.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="fm">__construct&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Handle the event.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param Events $event
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">handle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Event&lt;/span> &lt;span class="nv">$event&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="第二步注册监听">第二步：注册监听&lt;/h3>
+&lt;p>打开 &lt;code>app/Providers/EventServiceProvider.php&lt;/code>，将我们的监听添加上:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="k">protected&lt;/span> &lt;span class="nv">$listen&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;auth.login&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;App\Handlers\Events\AuthLoginEventHandler&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="第三步添加逻辑代码">第三步：添加逻辑代码&lt;/h3>
+&lt;p>我们的需求是：在用户登录的时候给用户添加最后登录时间(&lt;code>last_login_at&lt;/code>)，以及最后登录的IP(&lt;code>last_ip&lt;/code>)。&lt;/p>
+&lt;blockquote>
+&lt;p>注意：这两个字段是我自己创建的
+当然，这里只是举例，你可以在这里完成所有你想要的需求。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>注意：框架默认的事件触发时的参数都可能不同，具体请查看框架源码或者参阅相关文档。
+小窍门：使用 关键字 &lt;code>fire('&lt;/code> 在框架目录中搜索，可以得到大部分的框架事件的调用处。&lt;/p>
+&lt;/blockquote>
+&lt;p>这里 &lt;code>auth.login&lt;/code> 事件框架会传递两个参数：&lt;code>用户实例&lt;/code>, &lt;code>是否记住登录&lt;/code>，所以我们修改我们刚刚创建的 &lt;code>AuthLoginEventHandler.php&lt;/code> 中的 &lt;code>handle&lt;/code> 方法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 处理用户登录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param User $user 用户
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param boolean $remember 是否记住登录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">handle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">User&lt;/span> &lt;span class="nv">$user&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$remember&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">last_login_at&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Carbon&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">last_ip&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">ip&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//TODO:其它动作，比如增加积分等等。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">save&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以看到上面我们用到了 &lt;code>Illuminate\Http\Request&lt;/code> 对象，所以我们还需要添加一个属性 &lt;code>protected $request&lt;/code>，然后从构造方法 &lt;code>__construct&lt;/code> 让框架注入进来（由框架完成注入）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Request 对象
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @var Illuminate\Http\Request
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">protected&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Create the event handler.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="fm">__construct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Request&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们所有用到的类请记得引入。最后完整的 &lt;code>AuthLoginEventHandler.php&lt;/code> 如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Handlers\Events&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Contracts\Queue\ShouldBeQueued&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Queue\InteractsWithQueue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Http\Request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">App\Models\User&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Carbon\Carbon&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">AuthLoginEventHandler&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Request 对象
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @var Illuminate\Http\Request
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">protected&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Create the event handler.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="fm">__construct&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Request&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 处理用户登录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param User $user 用户
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param boolean $remember 是否记住登录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">handle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">User&lt;/span> &lt;span class="nv">$user&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$remember&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">last_login_at&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Carbon&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">last_ip&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">request&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">ip&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//TODO:其它动作，比如增加积分等等。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$user&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">save&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后在用户登录的时候就会自动给用户字段 &lt;code>last_login_at&lt;/code> 和 &lt;code>last_ip&lt;/code> 补充内容了。是不是很方便呢？&lt;/p></description></item><item><title>Laravel 获取当前控制器名称或方法</title><link>https://blog.bitqiu.cc/p/laravel-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%8E%A7%E5%88%B6%E5%99%A8%E5%90%8D%E7%A7%B0%E6%88%96%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/laravel-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%8E%A7%E5%88%B6%E5%99%A8%E5%90%8D%E7%A7%B0%E6%88%96%E6%96%B9%E6%B3%95/</guid><description>&lt;p>我们有时候需要获取当前 Laravel 项目的控制器或者方法名，框架默认是不会提供单独的方法的，框架只提供了如下的方法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">\Route&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">current&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">getActionName&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>返回的结果是：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">App\Http\Controllers\WelcomeController&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="nx">index&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可是这不是我们想要的，我们只想获取控制器名或者方法名，那么，你可以自定义下面三个函数来实现：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 获取当前控制器名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return string
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">getCurrentControllerName&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">getCurrentAction&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="s1">&amp;#39;controller&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 获取当前方法名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return string
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">getCurrentMethodName&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">getCurrentAction&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="s1">&amp;#39;method&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 获取当前控制器与方法
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return array
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">getCurrentAction&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$action&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">\Route&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">current&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">getActionName&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">list&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$class&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$method&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">explode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;@&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$action&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;controller&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nv">$class&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;method&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nv">$method&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>另外推荐近期完成的两个 Laravel 拓展包：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/overtrue/laravel-lang" target="_blank" rel="noopener"
+>overtrue/laravel-lang&lt;/a> 基于 &lt;a class="link" href="https://github.com/caouecs/Laravel4-lang" target="_blank" rel="noopener"
+>Laravel4-lang&lt;/a> 的 44 语种语言文件&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/overtrue/laravel-pinyin" target="_blank" rel="noopener"
+>overtrue/laravel-pinyin&lt;/a> Laravel 中文转拼音， 基于 &lt;a class="link" href="https://github.com/overtrue/pinyin" target="_blank" rel="noopener"
+>overtrue/pinyin&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Laravel拓展jenssegers/laravel-mongodb与MySQL关联查询字段类型不一致问题解决方案</title><link>https://blog.bitqiu.cc/p/laravel%E6%8B%93%E5%B1%95jenssegers/laravel-mongodb%E4%B8%8Emysql%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link><pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/laravel%E6%8B%93%E5%B1%95jenssegers/laravel-mongodb%E4%B8%8Emysql%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid><description>&lt;p>当我们在存储mongo数据的时候，整型字段存储的值为&lt;code>NumberLong&lt;/code>格式，那么如果这个id来自于MySQL，在使用MySQL模型与MongoDB关联查询时就会踩到这个坑，从jenssegers/laravel-mongodb生成的SQL可以看到类似这样的结果：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="p">...&lt;/span>&lt;span class="err">{&lt;/span>&lt;span class="s2">&amp;#34;object_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">{&lt;/span>&lt;span class="s2">&amp;#34;$in&amp;#34;&lt;/span>&lt;span class="p">:[&lt;/span>&lt;span class="s2">&amp;#34;13&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;15&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">}}&lt;/span>&lt;span class="p">...&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可是我们的期望是：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="p">...&lt;/span>&lt;span class="err">{&lt;/span>&lt;span class="s2">&amp;#34;object_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">{&lt;/span>&lt;span class="s2">&amp;#34;$in&amp;#34;&lt;/span>&lt;span class="p">:[&lt;/span>&lt;span class="mi">13&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">}}&lt;/span>&lt;span class="p">...&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里的13、15是MySQL里的一条记录，在mongo里的值为&lt;code>NumberLong(13)&lt;/code>， 所以查询结果永远为空。
+找遍了源码，没有一个更好的解决方法，后来只能使用Eloquent模型提供的&lt;a class="link" href="http://v4.golaravel.com/docs/4.2/eloquent#accessors-and-mutators" target="_blank" rel="noopener"
+>&lt;strong>属性修改器&lt;/strong>&lt;/a>来实现：&lt;/p>
+&lt;p>在&lt;strong>MySQL的模型里&lt;/strong>对相应字段使用修改器(这里以id为例)：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * 避免与mongo关联时id转为字符的问题
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param string $id
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return int
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">getIdAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">intval&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>方法名：&lt;code>get属性名大驼峰Attribute&lt;/code>, ex: &lt;code>object_id&lt;/code> -&amp;gt; &lt;code>getObjectIdAttribute&lt;/code>&lt;/p>
+&lt;p>框架源码参考：&lt;a class="link" href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Model.php#L2409-L2419" target="_blank" rel="noopener"
+>getAttribute&lt;/a>&lt;/p></description></item><item><title>MySQL中EXPLAIN命令详解</title><link>https://blog.bitqiu.cc/p/mysql%E4%B8%ADexplain%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</link><pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/mysql%E4%B8%ADexplain%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</guid><description>&lt;p>EXPLAIN显示了MySQL如何使用索引来处理SELECT语句以及连接表。可以帮助选择更好的索引和写出更优化的查询语句。
+使用方法，在select语句前加上&lt;code>EXPLAIN&lt;/code>就可以了：&lt;/p>
+&lt;p>如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">EXPLAIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">surname&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">first_name&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">FORM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="o">`=`&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>EXPLAIN&lt;/strong>列的解释：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>列&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>table&lt;/code>&lt;/td>
+&lt;td>显示这一行的数据是关于哪张表的。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>type&lt;/code>&lt;/td>
+&lt;td>这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为 &lt;code>const&lt;/code>、&lt;code>eq_reg&lt;/code>、&lt;code>ref&lt;/code>、&lt;code>range&lt;/code>、&lt;code>index&lt;/code>和&lt;code>ALL&lt;/code>。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>possible_keys&lt;/code>&lt;/td>
+&lt;td>显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从&lt;code>WHERE&lt;/code>语句中选择一个合适的语句。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>key&lt;/code>&lt;/td>
+&lt;td>实际使用的索引。如果为&lt;code>NULL&lt;/code>，则没有使用索引。很少的情况下，MySQL会选择优化不足的索引。这种情况下，可以在&lt;code>SELECT&lt;/code>语句中使用&lt;code>USE INDEX（indexname）&lt;/code> 来强制使用一个索引或者用&lt;code>IGNORE INDEX（indexname）&lt;/code>来强制MySQL忽略索引。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>key_len&lt;/code>&lt;/td>
+&lt;td>使用的索引的长度。在不损失精确性的情况下，长度越短越好。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ref&lt;/code>&lt;/td>
+&lt;td>显示索引的哪一列被使用了，如果可能的话，是一个常数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>rows&lt;/code>&lt;/td>
+&lt;td>MySQL认为必须检查的用来返回请求数据的行数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Extra&lt;/code>&lt;/td>
+&lt;td>关于MySQL如何解析查询的额外信息。将在表4.3中讨论，但这里可以看到的坏的例子是&lt;code>Using temporary&lt;/code>和&lt;code>Using filesort&lt;/code>，意思MySQL根本不能使用索引，结果是检索会很慢。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>extra列返回的描述的意义：&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>值&lt;/th>
+&lt;th>意义&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>Distinct&lt;/code>&lt;/td>
+&lt;td>一旦MySQL找到了与行相联合匹配的行，就不再搜索了。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Not exists&lt;/code>&lt;/td>
+&lt;td>MySQL优化了&lt;code>LEFT JOIN&lt;/code>，一旦它找到了匹配&lt;code>LEFT JOIN&lt;/code>标准的行，就不再搜索了。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Range checked for each Record（index map:#）&lt;/code>&lt;/td>
+&lt;td>没有找到理想的索引，因此对于从前面表中来的每一个行组合，MySQL检查使用哪个索引，并用它来从表中返回行。这是使用索引的最慢的连接之一。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Using filesort&lt;/code>&lt;/td>
+&lt;td>看到这个的时候，查询就需要优化了。MySQL需要进行额外的步骤来发现如何对返回的行排序。它根据连接类型以及存储排序键值和匹配条件的全部行的行指针来排序全部行。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Using index&lt;/code>&lt;/td>
+&lt;td>列数据是从仅仅使用了索引中的信息而没有读取实际的行动的表返回的，这发生在对表的全部的请求列都是同一个索引的部分的时候。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Using temporary&lt;/code>&lt;/td>
+&lt;td>看到这个的时候，查询需要优化了。这里，MySQL需要创建一个临时表来存储结果，这通常发生在对不同的列集进行&lt;code>ORDER BY&lt;/code>上，而不是&lt;code>GROUP BY&lt;/code>上。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Where used&lt;/code>&lt;/td>
+&lt;td>使用了&lt;code>WHERE&lt;/code>从句来限制哪些行将与下一张表匹配或者是返回给用户。如果不想返回表中的全部行，并且连接类型&lt;code>ALL&lt;/code>或&lt;code>index&lt;/code>，这就会发生，或者是查询有问题不同连接类型的解释（按照效率高低的顺序排序）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>system&lt;/code>&lt;/td>
+&lt;td>表只有一行 &lt;code>system&lt;/code> 表。这是const连接类型的特殊情况 。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>const&lt;/code>&lt;/td>
+&lt;td>表中的一个记录的最大值能够匹配这个查询（索引可以是主键或惟一索引）。因为只有一行，这个值实际就是常数，因为MySQL先读这个值然后把它当做常数来对待。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>eq_ref&lt;/code>&lt;/td>
+&lt;td>在连接中，MySQL在查询时，从前面的表中，对每一个记录的联合都从表中读取一个记录，它在查询使用了索引为主键或惟一键的全部时使用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ref&lt;/code>&lt;/td>
+&lt;td>这个连接类型只有在查询使用了不是惟一或主键的键或者是这些类型的部分（比如，利用最左边前缀）时发生。对于之前的表的每一个行联合，全部记录都将从表中读出。这个类型严重依赖于根据索引匹配的记录多少—越少越好。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>range&lt;/code>&lt;/td>
+&lt;td>这个连接类型使用索引返回一个范围中的行，比如使用&amp;gt;或&amp;lt;查找东西时发生的情况。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>index&lt;/code>&lt;/td>
+&lt;td>这个连接类型对前面的表中的每一个记录联合进行完全扫描（比&lt;code>ALL&lt;/code>更好，因为索引一般小于表数据）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ALL&lt;/code>&lt;/td>
+&lt;td>这个连接类型对于前面的每一个记录联合进行完全扫描，这一般比较糟糕，应该尽量避免。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>PHP的弱类型实现</title><link>https://blog.bitqiu.cc/p/php%E7%9A%84%E5%BC%B1%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0/</link><pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/php%E7%9A%84%E5%BC%B1%E7%B1%BB%E5%9E%8B%E5%AE%9E%E7%8E%B0/</guid><description>&lt;p>PHP是弱类型，动态的语言脚本。在申明一个变量的时候，并不需要指明它保存的数据类型。
+例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$var&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$var&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;variable&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$var&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">1.00&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$var&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$var&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>动态变量，在运行期间是可以改变的，并且在使用前无需声明变量类型。&lt;/p>
+&lt;p>&lt;strong>问题一、Zend引擎是如何用C实现这种弱类型的呢？&lt;/strong>&lt;/p>
+&lt;p>实际上，在PHP中声明的变量，在ZE中都是用结构体zval来保存的。
+首先我们打开Zend/zend.h来看zval的定义：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="k">struct&lt;/span> &lt;span class="n">_zval_struct&lt;/span> &lt;span class="n">zval&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">struct&lt;/span> &lt;span class="n">_zval_struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/* Variable information */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zvalue_value&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/* value */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zend_uint&lt;/span> &lt;span class="n">refcount__gc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zend_uchar&lt;/span> &lt;span class="n">type&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/* active type */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zend_uchar&lt;/span> &lt;span class="n">is_ref__gc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="k">union&lt;/span> &lt;span class="n">_zvalue_value&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">long&lt;/span> &lt;span class="n">lval&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/* long value */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">dval&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/* double value */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="n">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">HashTable&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">ht&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/* hash table value */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zend_object_value&lt;/span> &lt;span class="n">obj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="n">zvalue_value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Zend/zend_types.h：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">char&lt;/span> &lt;span class="n">zend_bool&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">char&lt;/span> &lt;span class="n">zend_uchar&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">zend_uint&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">zend_ulong&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">short&lt;/span> &lt;span class="n">zend_ushort&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>从上述代码中，可以看到&lt;code>_zvalue_value&lt;/code>是真正保存数据的关键部分。通过共用体实现的弱类型变量声明&lt;/p>
+&lt;p>&lt;strong>问题二、Zend引擎是如何判别、存储PHP中的多种数据类型的呢？&lt;/strong>&lt;/p>
+&lt;p>&lt;code>_zval_struct.type&lt;/code>中存储着一个变量的真正类型，根据&lt;code>type&lt;/code>来选择如何获取&lt;code>zvalue_value&lt;/code>的值。&lt;/p>
+&lt;p>type值列表(Zend/zend.h)：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_NULL 0
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_LONG 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_DOUBLE 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_BOOL 3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_ARRAY 4
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_OBJECT 5
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_STRING 6
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_RESOURCE 7
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_CONSTANT 8
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define IS_CONSTANT_ARRAY 9
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>来看一个简单的例子：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//此时zval.type = IS_LONG,那么zval.value就去取lval.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//此时zval.type = IS_ARRAY,那么zval.value就去取ht.
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这其中最复杂的，并且在开发第三方扩展中经常需要用到的是&amp;quot;资源类型&amp;quot;.
+在PHP中，任何不属于PHP的内建的变量类型的变量，都会被看作资源来进行保存。
+比如：数据库句柄、打开的文件句柄、打开的socket句柄。&lt;/p>
+&lt;p>资源类型，会用&lt;code>lval&lt;/code>，此时它是一个整型指示器， 然后PHP会再根据这个指示器在PHP内建的一个资源列表中查询相对应的资源。&lt;/p>
+&lt;p>正是因为ZE这样的处理方式，使PHP就实现了弱类型，而对于ZE的来说，它所面对的永远都是同一种类型zval。&lt;/p>
+&lt;p>转自：http://allensuiverson.blog.163.com/blog/static/13364826920131013103226827/&lt;/p></description></item><item><title>MySQL性能优化小结</title><link>https://blog.bitqiu.cc/p/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%B0%8F%E7%BB%93/</link><pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%B0%8F%E7%BB%93/</guid><description>&lt;h1 id="一数据库设计和查询优化">一.数据库设计和查询优化&lt;/h1>
+&lt;ol>
+&lt;li>Schema设计时主要考虑:标准化,数据类型,索引.
+&lt;ul>
+&lt;li>一个数据库设计可以混合使用,一部分表格标准化,一部分表格非标准化.(非标准化表格适当冗余)&lt;/li>
+&lt;li>最优的数据类型,使表在磁盘上占据的空间尽可能小,读写快,占用内存少.(索引也尽量建立在较小的列上)&lt;/li>
+&lt;li>正确索引,提高Select,Update,Delete性能.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>不同的Sql不同的优化方案
+&lt;ul>
+&lt;li>Explain Sql查看结果,分析查询.&lt;/li>
+&lt;li>查询使用匹配的类型.&lt;/li>
+&lt;li>使用long-slow-queries记录较慢查询,分析优化.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="二服务器端优化">二.服务器端优化&lt;/h1>
+&lt;ol>
+&lt;li>安装适当的MySql版本.
+如果服务器使用Intel处理器,使用Intel C++版本可提高30 %效率&lt;/li>
+&lt;li>配置优化.
+常见优化项:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>charset&lt;/code>&lt;/li>
+&lt;li>&lt;code>max_allowed_packet&lt;/code>&lt;/li>
+&lt;li>&lt;code>max_connections&lt;/code>&lt;/li>
+&lt;li>&lt;code>table_cache_size&lt;/code>&lt;/li>
+&lt;li>&lt;code>query_cache_size&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>三.存储引擎优化&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>MyISAM&lt;/strong>
+&lt;ol>
+&lt;li>引擎特点
+&lt;ul>
+&lt;li>不支持事务,提供高速存储,检索以及全文搜索能力.&lt;/li>
+&lt;li>宕机会破坏表.&lt;/li>
+&lt;li>使用的磁盘和内存空间小.&lt;/li>
+&lt;li>基于表的锁,并发更新数据会出现严重性能问题.&lt;/li>
+&lt;li>MySql只缓存索引,数据由OS缓存.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>适用情况
+&lt;ul>
+&lt;li>日志系统.&lt;/li>
+&lt;li>只读操作或者大部分读操作.&lt;/li>
+&lt;li>全表扫描.&lt;/li>
+&lt;li>批量导入数据.&lt;/li>
+&lt;li>没有事务的低并发读写.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>优化策略
+&lt;ul>
+&lt;li>NOT NULL,可以减少磁盘存储.&lt;/li>
+&lt;li>Optimize Table,碎片整理,回收空闲空间.&lt;/li>
+&lt;li>Deleting/updating/adding大量数据的时候禁止使用index.&lt;/li>
+&lt;li>参数优化,key_buffer_size_variable索引缓存设置.&lt;/li>
+&lt;li>避免并发Inset Update.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;strong>InnoDB&lt;/strong>
+&lt;ol>
+&lt;li>引擎特点
+&lt;ul>
+&lt;li>具有提交,回滚和崩溃恢复能力的事务安全存储引擎.&lt;/li>
+&lt;li>处理巨大数据量性能卓越,它的CPU使用效率非常高.&lt;/li>
+&lt;li>需要更多的内存和磁盘存储空间.&lt;/li>
+&lt;li>数据和索引都缓存在内存中.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>适用情况
+&lt;ul>
+&lt;li>需要事务的应用.&lt;/li>
+&lt;li>高并发的应用.&lt;/li>
+&lt;li>自动恢复.&lt;/li>
+&lt;li>较快速的基于主键的操作.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>优化策略
+&lt;ul>
+&lt;li>尽量使用short,integer的主键.&lt;/li>
+&lt;li>使用prefix keys,因为InnoDB没有key压缩功能.&lt;/li>
+&lt;li>参数优化,innodb_buffer_pool_size,innodb_data_home_dir等等.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="三-缓存优化">三. 缓存优化&lt;/h1>
+&lt;ol>
+&lt;li>Memcached&lt;/li>
+&lt;li>Redis&lt;/li>
+&lt;/ol>
+&lt;p>转自： &lt;a class="link" href="http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/" target="_blank" rel="noopener"
+>http://allensuiverson.blog.163.com/blog/static/133648269201310119491437/&lt;/a>&lt;/p></description></item><item><title>Links</title><link>https://blog.bitqiu.cc/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/links/</guid><description/></item><item><title>Search</title><link>https://blog.bitqiu.cc/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/search/</guid><description/></item></channel></rss>

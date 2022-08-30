@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>linux on Bitqiu</title>
-    <link>https://blog.bitqiu.cc/tags/linux/</link>
-    <description>Recent content in linux on Bitqiu</description>
-    <image>
-      <url>https://blog.bitqiu.cc/blog-cover.png</url>
-      <link>https://blog.bitqiu.cc/blog-cover.png</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 08 May 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>sudo -Hu 执行时找不到命令的问题解决</title>
-      <link>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</link>
-      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitqiu.cc/posts/cannot-find-command-sudo-hu/</guid>
-      <description>在 centos 系统下 `sudo -Hu` 执行时找不到命令的问题解决办法</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Bitqiu Blog</title><link>https://blog.bitqiu.cc/tags/linux/</link><description>Recent content in linux on Bitqiu Blog</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 08 May 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.bitqiu.cc/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>sudo -Hu 执行时找不到命令的问题解决</title><link>https://blog.bitqiu.cc/p/sudo-hu-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link><pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate><guid>https://blog.bitqiu.cc/p/sudo-hu-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid><description>&lt;p>虽然在 &lt;code>/etc/profile&lt;/code> 中加了全局 &lt;code>PATH&lt;/code>，但是在以 &lt;code>sudo -Hu [username] [command]&lt;/code> 执行的时候报命令不存在，原因是 &lt;code>/etc/sudoers&lt;/code> 中还有一个 &lt;code>secure_path&lt;/code> 没修改：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">visudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查找 &lt;code>secure_path&lt;/code>，加入你要添加的目录，比如 &lt;code>/usr/local/bin&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Defaults &lt;span class="nv">secure_path&lt;/span> &lt;span class="o">=&lt;/span> /sbin:/bin:/usr/sbin:/usr/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>改为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Defaults &lt;span class="nv">secure_path&lt;/span> &lt;span class="o">=&lt;/span> /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>即可。&lt;/p></description></item></channel></rss>
