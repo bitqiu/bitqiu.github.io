@@ -1,113 +1,144 @@
 baseURL: https://blog.bitqiu.cc/
-title: Bitqiu
+theme: hugo-theme-stack
 paginate: 10
-theme: PaperMod
+title: Bitqiu Blog
 
-enableInlineShortcodes: true
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true
+# languageCode: en-us
+# languages:
+#     en:
+#         languageName: English
+#         title: Example Site
+#         weight: 1
+#     zh-cn:
+#         languageName: 中文
+#         title: 演示站点
+#         weight: 2
 
-minify:
-  disableXML: true
-  minifyOutput: true
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+# Change it to your Disqus shortname before using
+disqusShortname: hugo-theme-stack
+
+# GA Tracking ID
+googleAnalytics:
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: en
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+# hasCJKLanguage: false
+
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
 
 params:
-  env: production
-  title: Bitqiu blog
-  # description: "ExampleSite description"
-  # keywords: [Blog, Portfolio, PaperMod]
-  author: bitqiu
-  
-  images: ["blog-cover.png"]
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon:
 
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+    footer:
+        since: 2020
+        customText:
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: true
-  tocopen: false
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    # favicon: "<link / abs url>"
-    # favicon16x16: "<link / abs url>"
-    # favicon32x32: "<link / abs url>"
-    # apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "apple-touch-icon.png"
+    sidebar:
+        emoji: 🤖️
+        subtitle: Keep calm and coding.
+        avatar:
+            enabled: true
+            local: false
+            src: https://avatars.githubusercontent.com/u/4955106?v=4
 
-  # profile mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: Bitqiu
-    # imageUrl: "#"
-    # imageWidth: 120
-    # imageHeight: 120
-    # imageTitle: my image
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+    article:
+        math: false
+        toc: true
+        readingTime: true
+        license:
+            enabled: false
+            default: Licensed under CC BY-NC-SA 4.0
 
-  socialIcons:
-    # - name: twitter
-    #   url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/6186521/q-bit"
-    - name: github
-      url: "https://github.com/bitqiu"
+    comments:
+        enabled: false
+        
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
 
-  editPost:
-      URL: "https://github.com/bitqiu/bitqiu.github.io/tree/main/content"
-      Text: "Suggest Changes" # edit text
-      appendFilePath: true # to append file path to Edit link
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
 
-    
+    colorScheme:
+        # Display toggle
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-  main:
-    - name: Archive
-      url: archives
-      weight: 1
-    - name: Posts
-      url: posts
-      weight: 2
-    - name: Tags
-      url: tags
-      weight: 3
-    - name: Search
-      url: search
-      weight: 20
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-# pygmentsUseClasses: true
+    main: []
+
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/bitqiu
+          params:
+              icon: brand-github
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
 markup:
     goldmark:
-      renderer:
-        unsafe: true
-    # highlight:
-    #     # anchorLineNos: true
-    #     codeFences: true
-    #     guessSyntax: true
-    #     lineNos: true
-    #     style: monokai
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4

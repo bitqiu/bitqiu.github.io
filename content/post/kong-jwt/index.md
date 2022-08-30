@@ -1,5 +1,5 @@
 ---
-title: Kong 基本用法 + JWT
+title: Kong + JWT
 date: 2020-03-23 11:02:02
 tags:
     - gateway

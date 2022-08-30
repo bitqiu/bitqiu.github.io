@@ -4,7 +4,7 @@ date: 2015-03-19
 tags: 
   - php
   - laravel
-excerpt: 在 Laravel 项目中获取当前被调用的控制器名称和方法
+description: 在 Laravel 项目中获取当前被调用的控制器名称和方法
 ---
 <!--more-->
 我们有时候需要获取当前 Laravel 项目的控制器或者方法名，框架默认是不会提供单独的方法的，框架只提供了如下的方法：
