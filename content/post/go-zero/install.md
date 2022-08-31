@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 1.go-zero 安装
+title: 1、go-zero 安装
 date: 2022-08-31
 tags: 
   - golang
   - go-zero
 categories:
   - golang
-excerpt: 
+description: go-zero 是一个集成了各种工程实践的 web 和 rpc 框架。通过弹性设计保障了大并发服务端的稳定性，经受了充分的实战检验。
 ---
 <!--more-->
 ## goctl 安装
